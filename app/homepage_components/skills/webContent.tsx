@@ -97,9 +97,9 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
         <p className={`${Roboto1} text-white text-4xl -mt-1 text-center mb-10`}>{getSkill()}</p>
         <div className='flex flex-col justify-center bg-neutral-800 rounded-[6px] bg-opacity-[40%] shadow-inner p-8 items-center w-full h-full'>
             {SkillDes.map((item, id) => 
-            <div className={`w-full h-auto flex flex-wrap justify-center gap-12 md:gap-8 transition-all ${WebSkillIndex === id ? 'opacity-100' : 'opacity-0 hidden'}`}>
+            <div key={id} className={`w-full h-auto flex flex-wrap justify-center gap-12 md:gap-8 transition-all ${WebSkillIndex === id ? 'opacity-100' : 'opacity-0 hidden'}`}>
                 {item.map((child) => 
-                    <div className={`flex flex-col overflow-show justify-center items-center md:py-6 ${WebSkillIndex === 1 ? 'md:px-6' : 'md:px-16'} rounded-[4px]`}>
+                    <div key={child.name} className={`flex flex-col overflow-show justify-center items-center md:py-6 ${WebSkillIndex === 1 ? 'md:px-6' : 'md:px-16'} rounded-[4px]`}>
                         <Image
                             alt={`${child.name} Logo`}
                             src={child.image}
@@ -137,7 +137,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
             <Content />
             <div className="relative overflow-hidden w-full h-full flex flex-col max-w-7xl mt-2">
                 {ProjInfo.map((item, id) =>
-                    <div onClick={ProjIndex === (id+1) ? () => setProjIndex(0) : () => setProjIndex(id+1)} className={`group shadow-sm hover:shadow-md hover:cursor-pointer flex justify-center items-center bg-gradient-to-tr ${ProjIndex === (id+1) ? 'from-cyan-500' : 'from-teal-200 hover:translate-y-[-2px] hover:from-blue-500 hover:to-teal-200'} to-blue-500 mt-4 transition-all duration-800 overflow-hidden rounded-md rounded-[4px]`}>
+                    <div key={item.name} onClick={ProjIndex === (id+1) ? () => setProjIndex(0) : () => setProjIndex(id+1)} className={`group shadow-sm hover:shadow-md hover:cursor-pointer flex justify-center items-center bg-gradient-to-tr ${ProjIndex === (id+1) ? 'from-cyan-500' : 'from-teal-200 hover:translate-y-[-2px] hover:from-blue-500 hover:to-teal-200'} to-blue-500 mt-4 transition-all duration-800 overflow-hidden rounded-md rounded-[4px]`}>
                         <div className={`overflow-hidden transition-[height] duration-300 ease-in-out ${ProjIndex === (id+1) ? 'h-[40rem]' : 'h-[10rem] pt-[8px]'}`}>
                             <div className={`w-full flex items-center relative h-40 transition-all duration-300 ease-in-out ${ProjIndex === (id+1) ? 'bg-transparent' : 'bg-zinc-800'} first:mt-0 shadow-md`}>
                                 <div>    
