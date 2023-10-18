@@ -2,26 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes fadeToOne {
+  to {
+    background-color:#b91c1c;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.fadeToOneClass {
+  animation: fadeToOne 2s forwards;
+}
+
+@keyframes fadeToTwo {
+  to {
+    background-color: #6d28d9;
+  }
+}
+
+.fadeToTwoClass {
+  animation: fadeToTwo 2s forwards;
+}
+
+@keyframes fadeToThree {
+  to {
+    background-color:#1d4ed8;
+  }
+}
+
+.fadeToThreeClass {
+  animation: fadeToThree 2s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    height: 10rem;
+  }
+  to {
+    height: 22rem;
+  }
+}
+
+.slideIn {
+  animation: slideIn 2s forwards;
+}
+
+@keyframes slideOut {
+  to {
+    height: 10rem;
+  }
+}
+
+.slideOut {
+  animation: slideOut 2s forwards;
+}
+
+.backgroundGradient {
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #e5e5f7 25%);
+  background-position:  35px 0, 35px 0, 0 0, 0 0;
+  background-size: 35px 35px;
+  background-repeat: repeat;
+}
+
+.nameShadow {
+  text-shadow: black 3px 3px;
+}
+
+.occShadow {
+  text-shadow: white 0px 3px 0px;
 }
