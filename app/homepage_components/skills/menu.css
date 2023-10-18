@@ -1,0 +1,35 @@
+@keyframes menu0 {
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+.menu0 {
+  animation: menu0 500ms forwards;
+  animation-timing-function: ease-in-out;
+  will-change: transform;
+}
+
+@keyframes menu1 {
+    to {
+        transform: translateX(0vw);
+    }
+}
+
+.menu1 {
+  animation: menu1 500ms forwards;
+  animation-timing-function: ease-in-out;
+  will-change: transform;
+}
+
+@keyframes menu2 {
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+.menu2 {
+  animation: menu2 500ms forwards;
+  animation-timing-function: ease-in-out;
+  will-change: transform;
+}
