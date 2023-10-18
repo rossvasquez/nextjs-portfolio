@@ -4,6 +4,8 @@ import { useState } from 'react'
 
 import { webIntro } from './webContentIntro'
 
+import { projectInfo } from './projectContent'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -14,50 +16,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
     const [ProjIndex, setProjIndex] = useState(0)
     const [ProjTab, setProjTab] = useState([0,0,0,0])
 
-    const [ProjInfo, setProjInfo] = useState([
-        {
-            "name": 'Tiden',
-            "tagline": "OpenAI Web App",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet nibh praesent tristique magna sit amet purus gravida quis. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Lectus sit amet est placerat in egestas erat imperdiet. Sem viverra aliquet eget sit amet tellus cras adipiscing. Sed turpis tincidunt id aliquet risus feugiat in. Scelerisque mauris pellentesque pulvinar pellentesque habitant. Lorem donec massa sapien faucibus et molestie ac feugiat sed."
-        },
-        {
-            "name": 'State Fairdle',
-            "tagline": "Hackathon Entry",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet nibh praesent tristique magna sit amet purus gravida quis. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Lectus sit amet est placerat in egestas erat imperdiet. Sem viverra aliquet eget sit amet tellus cras adipiscing. Sed turpis tincidunt id aliquet risus feugiat in. Scelerisque mauris pellentesque pulvinar pellentesque habitant. Lorem donec massa sapien faucibus et molestie ac feugiat sed."
-        },
-        {
-            "name": 'Cocktail Finder',
-            "tagline": "React In WordPress",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet nibh praesent tristique magna sit amet purus gravida quis. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Lectus sit amet est placerat in egestas erat imperdiet. Sem viverra aliquet eget sit amet tellus cras adipiscing. Sed turpis tincidunt id aliquet risus feugiat in. Scelerisque mauris pellentesque pulvinar pellentesque habitant. Lorem donec massa sapien faucibus et molestie ac feugiat sed."
-        },
-        {
-            "name": 'Catering Order System',
-            "tagline": "E-Commerce Web App",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet nibh praesent tristique magna sit amet purus gravida quis. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Lectus sit amet est placerat in egestas erat imperdiet. Sem viverra aliquet eget sit amet tellus cras adipiscing. Sed turpis tincidunt id aliquet risus feugiat in. Scelerisque mauris pellentesque pulvinar pellentesque habitant. Lorem donec massa sapien faucibus et molestie ac feugiat sed."
-        },
-        {
-            "name": 'Mobile Wallet',
-            "tagline": "Vue MVP",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet nibh praesent tristique magna sit amet purus gravida quis. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Lectus sit amet est placerat in egestas erat imperdiet. Sem viverra aliquet eget sit amet tellus cras adipiscing. Sed turpis tincidunt id aliquet risus feugiat in. Scelerisque mauris pellentesque pulvinar pellentesque habitant. Lorem donec massa sapien faucibus et molestie ac feugiat sed."
-        },
-        {
-            "name": 'Foundation Site',
-            "tagline": "Progressive Web App",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet nibh praesent tristique magna sit amet purus gravida quis. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Lectus sit amet est placerat in egestas erat imperdiet. Sem viverra aliquet eget sit amet tellus cras adipiscing. Sed turpis tincidunt id aliquet risus feugiat in. Scelerisque mauris pellentesque pulvinar pellentesque habitant. Lorem donec massa sapien faucibus et molestie ac feugiat sed."
-        },
-    ])
-
-    const bgColor = (id: number) => {
-        if (id === 0) {
-            return 'bg-amber-400'
-        } else if (id === 1) {
-            return 'bg-cyan-200'
-        } else if (id === 2) {
-            return 'bg-sky-200'
-        } else if (id === 3) {
-            return 'bg-red-300'
-        }
-    }
+    const [ProjInfo, setProjInfo] = useState(projectInfo)
 
     const [SkillDes] = useState(webIntro)
 
@@ -97,15 +56,17 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
         <p className={`${Roboto1} text-white text-4xl -mt-1 text-center mb-10`}>{getSkill()}</p>
         <div className='flex flex-col justify-center bg-neutral-800 rounded-[6px] bg-opacity-[40%] shadow-inner p-8 items-center w-full h-full'>
             {SkillDes.map((item, id) => 
-            <div key={id} className={`w-full h-auto flex flex-wrap justify-center gap-12 md:gap-8 transition-all ${WebSkillIndex === id ? 'opacity-100' : 'opacity-0 hidden'}`}>
+            <div key={id} className={`w-full h-auto flex flex-wrap justify-center mb-10 gap-x-16 md:gap-x-14 transition-all ${WebSkillIndex === id ? 'opacity-100' : 'opacity-0 hidden'}`}>
                 {item.map((child) => 
-                    <div key={child.name} className={`flex flex-col overflow-show justify-center items-center md:py-6 ${WebSkillIndex === 1 ? 'md:px-6' : 'md:px-16'} rounded-[4px]`}>
-                        <Image
-                            alt={`${child.name} Logo`}
-                            src={child.image}
-                            className='h-24 md:h-44 w-auto'
-                        />
-                        <p className={`text-white ${Roboto} text-2xl mt-5`}>{child.name}</p>
+                    <div key={child.name} className={`h-32 md:h-[16rem] flex flex-col justify-center relative items-center md:py-6 ${WebSkillIndex === 1 ? 'md:px-6' : 'md:px-16'} rounded-[4px]`}>
+                        <div className='h-3/4 w-full'>
+                            <Image
+                                alt={`${child.name} Logo`}
+                                src={child.image}
+                                className='h-full w-auto drop-shadow-lg'
+                            />
+                        </div>
+                        <p className={`text-white ${Roboto} text-2xl h-auto absolute bottom-0 drop-shadow-md`}>{child.name}</p>
                     </div>
                 )}
             </div>
@@ -132,34 +93,51 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
         </div>
     </div>
 
+    const projects = () =>
+    <div className="relative overflow-hidden w-full h-full flex flex-col max-w-7xl mt-2">
+        {ProjInfo.map((item, id) =>
+            <div key={item.name} className={`shadow-sm flex justify-center items-center bg-gradient-to-tr ${ProjIndex === (id+1) ? 'from-cyan-500 shadow-md' : 'from-teal-200 hover:translate-y-[-2px] hover:shadow-md hover:from-blue-500 hover:to-teal-200'} to-blue-500 mt-4 transition-all duration-800 overflow-hidden rounded-md rounded-[4px]`}>
+                <div className={`overflow-hidden transition-[height] duration-300 ease-in-out ${ProjIndex === (id+1) ? 'h-[40rem]' : 'h-[10rem] pt-[8px] relative'}`}>
+                    <div onClick={ProjIndex === (id+1) ? () => setProjIndex(0) : () => setProjIndex(id+1)} className='hover:cursor-pointer absolute w-full h-[10rem] z-20'/>
+                    <div className={`w-full flex items-center relative h-40 transition-all duration-300 ease-in-out ${ProjIndex === (id+1) ? 'bg-transparent' : 'bg-zinc-800'} first:mt-0 shadow-md`}>
+                        <div>    
+                            <p className={`${ProjIndex === (id+1) ? `scale-[110%]` : `scale-[100%]`} ${Bebas} pl-14 text-4xl text-white transition-all duration-300 ease-in-out`}>{item.name}</p>
+                            <p className={`${Roboto} ${ProjIndex === (id+1) ? `text-neutral-100 scale-[110%]` : `text-neutral-300 scale-[100%] mb-4`} pl-14 text-lg transition-all duration-300 ease-in-out`}>{item.tagline}</p>
+                        </div>
+                        <div className='absolute right-8 mb-2 rounded-full h-12 w-12'>
+                            <Image
+                                src={arrow}
+                                alt='Expand Section Arrow'
+                                className={`${ProjIndex === id + 1 ? '-rotate-90' : 'rotate-90'} transition-all duration-300 ease-in-out scale-50`}
+                            />
+                        </div>
+                    </div>
+                    <div className={`${Roboto} p-6 w-full bg-white h-[30rem] mx-auto text-2xl leading-loose`}>
+                        <div className={`${id === 0 || id === 2 ? 'float-left pr-6' : 'float-right pl-6'}`}>
+                            <div className='relative group w-[30rem] h-[17rem] rounded-md overflow-hidden shadow-md bg-slate-300'>
+                                <Image
+                                    src={item.image}
+                                    alt={`${item.name} Site Logo`}
+                                    className='relative z-10 w-full h-auto'
+                                />
+                                <div className='absolute z-20 top-0 flex justify-center items-center w-full h-full bg-zinc-800 bg-opacity-0 opacity-0 group-hover:bg-opacity-[60%] group-hover:opacity-100 group-hover:cursor-pointer'>
+                                    <div className={`py-3 px-10 flex justify-center bg-zinc-800 bg-opacity-100 hover:border-[.1rem] border-opacity-60 border-white shadow-inner rounded-[4px] text-white items-center ${Roboto2}`}>
+                                        Visit Site
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p className='-mt-2'>{item.description}</p>
+                    </div>
+                </div>
+            </div>
+        )}
+    </div> 
+
     return(
         <div className="flex flex-col justify-center items-center pb-8 bg-gradient-to-tr from-cyan-500 via-blue-500 px-2 to-teal-200 h-auto w-screen h-auto">
             <Content />
-            <div className="relative overflow-hidden w-full h-full flex flex-col max-w-7xl mt-2">
-                {ProjInfo.map((item, id) =>
-                    <div key={item.name} onClick={ProjIndex === (id+1) ? () => setProjIndex(0) : () => setProjIndex(id+1)} className={`group shadow-sm hover:shadow-md hover:cursor-pointer flex justify-center items-center bg-gradient-to-tr ${ProjIndex === (id+1) ? 'from-cyan-500' : 'from-teal-200 hover:translate-y-[-2px] hover:from-blue-500 hover:to-teal-200'} to-blue-500 mt-4 transition-all duration-800 overflow-hidden rounded-md rounded-[4px]`}>
-                        <div className={`overflow-hidden transition-[height] duration-300 ease-in-out ${ProjIndex === (id+1) ? 'h-[40rem]' : 'h-[10rem] pt-[8px]'}`}>
-                            <div className={`w-full flex items-center relative h-40 transition-all duration-300 ease-in-out ${ProjIndex === (id+1) ? 'bg-transparent' : 'bg-zinc-800'} first:mt-0 shadow-md`}>
-                                <div>    
-                                    <p className={`${ProjIndex === (id+1) ? `text-5xl pl-[3.35rem]` : `pl-14 text-4xl`} ${Bebas} text-white transition-all duration-300 ease-in-out`}>{item.name}</p>
-                                    <p className={`${Roboto} ${ProjIndex === (id+1) ? `text-neutral-100 text-xl` : `text-neutral-300 text-lg mb-4`} pl-14 transition-all duration-300 ease-in-out`}>{item.tagline}</p>
-                                </div>
-                                <div className='absolute right-8 mb-2 rounded-full h-12 w-12'>
-                                    <Image
-                                        src={arrow}
-                                        alt='Expand Section Arrow'
-                                        className={`${ProjIndex === id + 1 ? '-rotate-90' : 'rotate-90'} transition-all duration-300 ease-in-out scale-50`}
-                                    />
-                                </div>
-                            </div>
-                            <div className={`${Roboto} p-6 w-full bg-white h-[30rem] mx-auto text-2xl leading-loose`}>
-                                <div className={`w-[384px] h-[216px] ${id === 0 || id === 2 ? 'float-left' : 'float-right'} rounded-md bg-slate-300 odd:mr-6`}></div>
-                                <p className='-mt-2'>{item.description}</p>
-                            </div>
-                        </div>
-                    </div>
-                )}
-            </div>    
+            {projects()}
         </div>
     )
 }

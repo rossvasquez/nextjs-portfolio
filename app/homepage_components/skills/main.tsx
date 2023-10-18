@@ -116,9 +116,12 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
     
 
     return(
-        <div className='relative z-10'>
-            <Menu />
-            <ScrollDown />
-        </div>
+        <>
+            <p className={`text-transparent bg-gradient-to-tl from-teal-300 to-sky-200 drop-shadow-lg bg-clip-text ${Bebas} relative z-10 text-[6rem] md:text-[14rem] -mt-10 w-full font-semibold text-center leading-[5rem] md:leading-[20rem]`}>Ross Vasquez</p>
+            <div className='relative z-10'>
+                <Menu />
+                <ScrollDown />
+            </div>
+        </>
     )
 }
