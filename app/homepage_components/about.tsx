@@ -29,7 +29,7 @@ export default function About({Bebas, Roboto}:{Bebas: string, Roboto: string}) {
 
     return(
         <div className='w-full max-w-7xl p-2 mt-28 mb-8'>
-          <div className='w-full h-auto bg-neutral-800 p-6 bg-opacity-[15%] rounded-md shadow-md'>
+          <div className='w-full h-auto bg-neutral-800 p-6 bg-opacity-[30%] rounded-md shadow-md'>
             <div className='flex flex-row-reverse border-4 border-white shadow-inner overflow-hidden rounded-md w-full justify-center items-center'>
                 <div className='w-1/2 flex justify-center items-center'>
                     <div className='rounded-[100%] h-[30rem] w-[30rem]'>
@@ -37,6 +37,7 @@ export default function About({Bebas, Roboto}:{Bebas: string, Roboto: string}) {
                             src={me}
                             alt='Picture of Ross Vasquez'
                             className='w-full h-auto'
+                            priority
                         />
                     </div>
                 </div>
@@ -51,6 +52,7 @@ export default function About({Bebas, Roboto}:{Bebas: string, Roboto: string}) {
                                     src={icon.image}
                                     alt={`Logo`}
                                     className='hover:scale-[105%] transition-all hover:cursor-pointer hover:opacity-80 drop-shadow-md w-full h-auto'
+                                    priority
                                 />
                             </a>
                         )}
@@ -59,7 +61,7 @@ export default function About({Bebas, Roboto}:{Bebas: string, Roboto: string}) {
                     {/* <p className={`w-[30rem] text-right text-5xl mt-20 ${Bebas}`}>24 Years Old</p> */}
                 </div>
             </div>
-            <div className='bg-neutral-800 p-6 bg-opacity-[30%] shadow-inner rounded-md w-full h-auto mt-6'>
+            <div className='bg-neutral-800 p-6 bg-opacity-[40%] shadow-inner rounded-md w-full h-auto mt-6'>
                 <p className={`${Roboto} text-3xl text-white leading-[3rem]`}>I am a tech enthusiast from the Des Moines area. I enjoy leveraging my diverse skillset of web development, data transformation, and marketing to create original solutions. I am seeking a full-time position where I can be multi-faceted in providing value for an organization. My ideal position will allow me to grow my knowledge of what it means to architecht and implement through multiple mediums. I want to be challenged. To me, the best part of the development proccess in anything I do, is the feeling of solving a problem. It means I have gained something for future application.
                 <br/><br/>
                 Outside of technology, I am an avid golfer and pick-up basketball player. I used to be better, then I started coding, oh well. I enjoy life with my wonderful girlfriend who is my biggest supporter on my journey.

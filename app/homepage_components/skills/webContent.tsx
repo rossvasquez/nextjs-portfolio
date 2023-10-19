@@ -52,8 +52,10 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
 
     const Content = () =>
     <div className='w-full flex flex-col justify-center items-center overflow-hidden max-w-7xl mx-auto h-auto mt-6 shadow-md bg-neutral-800 p-4 rounded-[6px] bg-opacity-[30%]'>
-        <p className={`${Bebas} text-6xl text-white mt-6`}>Full Stack Web App Development</p>
-        <p className={`${Roboto1} text-white text-4xl -mt-1 text-center mb-10`}>{getSkill()}</p>
+        <div className='border-4 mb-4 border-neutral-800 border-opacity-[30%] w-full rounded-md'>
+            <p className={`${Bebas} text-6xl text-white mt-8 w-full text-center`}>Full Stack Web App Development</p>
+            <p className={`${Roboto1} text-white text-4xl -mt-1 text-center mb-8`}>{getSkill()}</p>
+        </div>
         <div className='flex flex-col justify-center bg-neutral-800 rounded-[6px] bg-opacity-[40%] shadow-inner p-8 items-center w-full h-full'>
             {SkillDes.map((item, id) => 
             <div key={id} className={`w-full h-auto flex flex-wrap justify-center mb-10 gap-x-16 md:gap-x-14 transition-all ${WebSkillIndex === id ? 'opacity-100' : 'opacity-0 hidden'}`}>
@@ -64,6 +66,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
                                 alt={`${child.name} Logo`}
                                 src={child.image}
                                 className='h-full w-auto drop-shadow-lg'
+                                priority
                             />
                         </div>
                         <p className={`text-white ${Roboto} text-2xl h-auto absolute bottom-0 drop-shadow-md`}>{child.name}</p>
@@ -119,6 +122,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
                                     src={item.image}
                                     alt={`${item.name} Site Logo`}
                                     className='relative z-10 w-full h-auto'
+                                    priority
                                 />
                                 <div className='absolute z-20 top-0 flex justify-center items-center w-full h-full bg-zinc-800 bg-opacity-0 opacity-0 group-hover:bg-opacity-[60%] group-hover:opacity-100 group-hover:cursor-pointer'>
                                     <div className={`py-3 px-10 flex justify-center bg-zinc-800 bg-opacity-100 hover:border-[.1rem] border-opacity-60 border-white shadow-inner rounded-[4px] text-white items-center ${Roboto2}`}>
