@@ -17,12 +17,15 @@ import fontawesomeLogo from '../../../public/webIntro/styling/fontawesome.png'
 import muiLogo from '../../../public/webIntro/styling/mui.png'
 import tailwindLogo from '../../../public/webIntro/styling/tailwind.png'
 import gfontsLogo from '../../../public/webIntro/styling/gfonts.png'
+import photoshopLogo from '../../../public/webIntro/styling/photoshop.png'
 
 import firebaseLogo from '../../../public/webIntro/services/firebase.png'
 import supabaseLogo from '../../../public/webIntro/services/supabase.png'
 import netlifyLogo from '../../../public/webIntro/services/netlify.png'
 import awsLogo from '../../../public/webIntro/services/aws.png'
 import cloudflareLogo from '../../../public/webIntro/services/cloudflare.png'
+import openaiLogo from '../../../public/webIntro/services/openai.png'
+import midjourneyLogo from '../../../public/webIntro/services/midjourney.png'
 
 import nosqlLogo from '../../../public/webIntro/database/nosql.png'
 import postgreLogo from '../../../public/webIntro/database/postgre.png'
@@ -109,6 +112,10 @@ export const webIntro = [
             "name": "Google Fonts",
             "image": gfontsLogo
         },
+        {
+            "name": "Photoshop",
+            "image": photoshopLogo
+        },
     ],
     [
         {
@@ -130,6 +137,14 @@ export const webIntro = [
         {
             "name": "Cloudflare",
             "image": cloudflareLogo
+        },
+        {
+            "name": "OpenAI",
+            "image": openaiLogo
+        },
+        {
+            "name": "Midjourney",
+            "image": midjourneyLogo
         },
     ],
     [

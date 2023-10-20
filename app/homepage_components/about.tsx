@@ -59,7 +59,7 @@ export default function About({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto: s
                         </div>
                     </div>
                     <div className='relative w-[30rem] h-14 mt-2'>
-                        <a href='/about/CV.pdf' target='_blank' className='absolute flex justify-center bg-gradient-to-br from-blue-500 to-cyan-500 items-center right-0 hover:bg-neutral-800 active:text-neutral-300 hover:bg-opacity-40 text-white hover:text-opacity-80 hover:scale-[105%] transition-all hover:cursor-pointer px-14 h-20 rounded-[70px] pb-[2px] shadow-md'>
+                        <a href='/about/CV.pdf' target='_blank' className='absolute flex justify-center bg-gradient-to-br from-blue-500 to-cyan-500 items-center right-0 hover:bg-neutral-800 active:text-neutral-300 hover:bg-opacity-40 text-white hover:text-opacity-80 hover:scale-[103%] transition-all hover:cursor-pointer px-14 h-20 rounded-[70px] pb-[2px] shadow-md'>
                             <p className={`${Roboto1} text-3xl`}>Resume</p>
                         </a>
                     </div>
@@ -69,7 +69,7 @@ export default function About({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto: s
             <div className='bg-neutral-800 p-6 bg-opacity-[40%] shadow-inner rounded-md w-full h-auto mt-6'>
                 <p className={`${Roboto1} text-3xl text-white leading-[4rem]`}>I am a tech enthusiast from the Des Moines area. I enjoy leveraging my diverse skillset of web development, data transformation, and marketing to create original solutions. I am seeking a full-time position where I can be multi-faceted in providing value for an organization. My ideal position will allow me to grow my knowledge of what it means to architecht and implement through multiple mediums. I want to be challenged. To me, the best part of the development proccess in anything I do, is the feeling of solving a problem. It means I have gained something for future application.
                 <br/><br/>
-                Outside of technology, I am an avid golfer and pick-up basketball player. I used to be better, then I started coding, oh well. I enjoy life with my wonderful girlfriend who is my biggest supporter on my journey.
+                Outside of technology, I am an avid golfer and pick-up basketball player. I used to be better, then I started coding, oh well. I enjoy life with my wonderful girlfriend who is my biggest supporter.
                 </p>
             </div>
           </div>

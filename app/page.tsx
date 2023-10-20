@@ -8,6 +8,7 @@ import About from './homepage_components/about'
 import Contact from './homepage_components/contact'
 import WebContent from './homepage_components/skills/webContent'
 import CRMContent from './homepage_components/crmContent'
+import Marketing from './homepage_components/marketingContent'
 
 import { useState } from 'react'
 
@@ -28,7 +29,7 @@ export default function Home() {
   
   return (
     <main className='select-none'>
-      <div className={`relative flex flex-col justify-center items-center bg-gradient-to-br from-cyan-500 via-blue-500 to-teal-200 w-screen ${Page === 1 ? 'h-screen' : 'h-auto'}`}>
+      <div className={`relative flex flex-col justify-center items-center bg-gradient-to-br min-h-[100vh] from-cyan-500 via-blue-500 to-teal-200 w-screen ${Page === 1 ? 'h-screen' : 'h-auto'}`}>
         <div className='z-10 flex justify-center md:justify-none items-center absolute top-0 w-screen h-20'>
           <div className={`relative flex justify-center items-center w-auto py-3 mt-7 px-8 bg-neutral-100 bg-opacity-[15%] rounded-full shadow-md gap-8 md:gap-12 ${playfair.className}`}>
             <div className={`absolute left-0 ${Page === 1 ? 'w-[7.3rem]' : null } ${Page === 2 ? 'translate-x-[6.5rem] w-[7.1rem]' : null } ${Page === 3 ? 'translate-x-[13.3rem] w-[8.2rem]' : null } transition-all h-full scale-[110%] rounded-full bg-zinc-800 bg-opacity-[1000%]`} />
@@ -49,6 +50,7 @@ export default function Home() {
       </div>
       {SkillsIndex === 0 ? <WebContent Roboto={roboto.className} Bebas={playfair.className} Roboto1={roboto1.className} Roboto2={roboto2.className} /> : null}
       {SkillsIndex === 1 ? <CRMContent Bebas={playfair.className} Roboto={roboto1.className} /> : null}
+      {SkillsIndex === 2 ? <Marketing Roboto={roboto.className} Bebas={playfair.className} Roboto1={roboto1.className} Roboto2={roboto2.className} /> : null}
     </main>
   )
 }
