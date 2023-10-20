@@ -52,24 +52,24 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
 
     const Content = () =>
     <div className='w-full flex flex-col justify-center items-center overflow-hidden max-w-7xl mx-auto h-auto mt-6 shadow-md bg-neutral-800 p-4 rounded-[6px] bg-opacity-[30%]'>
-        <div className='border-4 mb-4 border-neutral-800 border-opacity-[30%] w-full rounded-md'>
+        <div className='shadow-md mb-4 bg-zinc-800 w-full rounded-md'>
             <p className={`${Bebas} text-6xl text-white mt-8 w-full text-center`}>Full Stack Web App Development</p>
-            <p className={`${Roboto1} text-white text-4xl -mt-1 text-center mb-8`}>{getSkill()}</p>
+            <p className={`${Roboto1} text-white text-4xl text-center mt-2 mb-8`}>{getSkill()}</p>
         </div>
-        <div className='flex flex-col justify-center bg-neutral-800 rounded-[6px] bg-opacity-[40%] shadow-inner p-8 items-center w-full h-full'>
+        <div className='flex flex-col justify-center bg-neutral-800 rounded-[6px] bg-opacity-[40%] shadow-inner px-8 pb-6 items-center w-full h-full'>
             {SkillDes.map((item, id) => 
-            <div key={id} className={`w-full h-auto flex flex-wrap justify-center mb-10 gap-x-16 md:gap-x-14 transition-all ${WebSkillIndex === id ? 'opacity-100' : 'opacity-0 hidden'}`}>
+            <div key={id} className={`w-full h-auto flex flex-wrap justify-center mb-6 gap-x-16 md:gap-x-14 transition-all ${WebSkillIndex === id ? 'opacity-100' : 'opacity-0 hidden'}`}>
                 {item.map((child) => 
                     <div key={child.name} className={`h-32 md:h-[16rem] flex flex-col justify-center relative items-center md:py-6 ${WebSkillIndex === 1 ? 'md:px-6' : 'md:px-16'} rounded-[4px]`}>
                         <div className='h-3/4 w-full'>
                             <Image
                                 alt={`${child.name} Logo`}
                                 src={child.image}
-                                className='h-full w-auto drop-shadow-lg'
+                                className={`${child.name == 'Google Fonts' ? 'scale-[75%]' : null} ${child.name == 'CI/CD' ? 'scale-[90%]' : null} ${child.name == 'WordPress' ? 'scale-[90%]' : null} ${child.name == 'CSS' ? 'scale-[75%]' : null} ${child.name == 'Netlify' ? 'scale-[90%]' : null} ${child.name == 'AWS' ? 'scale-[120%] mt-2' : null} h-full w-auto drop-shadow-lg`}
                                 priority
                             />
                         </div>
-                        <p className={`text-white ${Roboto} text-2xl h-auto absolute bottom-0 drop-shadow-md`}>{child.name}</p>
+                        <p className={`text-white ${Roboto1} text-3xl h-auto absolute bottom-0 drop-shadow-md`}>{child.name}</p>
                     </div>
                 )}
             </div>
@@ -94,6 +94,9 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
                 </div>
             </div>
         </div>
+        <div className='flex justify-center items-center bg-neutral-800 p-6 bg-opacity-40 shadow-inner rounded-md mt-4'>
+            <p className={`${Roboto} text-3xl text-white leading-[4rem]`}>As a Certified Salesforce Administrator I understand the purpose and opportunity present in the CRM Ecosystem. Through APIs auxillary means such as Email Marketing or JavaScript WebApps, we can extend the manipulation and presentation of data in a central location for better business operations. Creating flows and attaching them to these nodes of extension is a crucial piece of BPA for modern businesses. With the power of NextJS, Salesforce and other CRM APIs can easily be called upon in server components to perform actions. Whether Salesforce or one of the many other CRM/CMS platforms available, I feel confident in my ability to create solutions.</p>
+        </div>
     </div>
 
     const projects = () =>
@@ -103,8 +106,11 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
                 <div className={`overflow-hidden transition-[height] duration-300 ease-in-out ${ProjIndex === (id+1) ? 'h-[40rem]' : 'h-[10rem] pt-[8px] relative'}`}>
                     <div onClick={ProjIndex === (id+1) ? () => setProjIndex(0) : () => setProjIndex(id+1)} className='hover:cursor-pointer absolute w-full h-[10rem] z-20'/>
                     <div className={`w-full flex items-center relative h-40 transition-all duration-300 ease-in-out ${ProjIndex === (id+1) ? 'bg-transparent' : 'bg-zinc-800'} first:mt-0 shadow-md`}>
-                        <div>    
-                            <p className={`${ProjIndex === (id+1) ? `scale-[110%]` : `scale-[100%]`} ${Bebas} pl-14 text-4xl text-white transition-all duration-300 ease-in-out`}>{item.name}</p>
+                        <div>
+                            <div className='flex'>
+                                <p className={`${ProjIndex === (id+1) ? `scale-[110%]` : `scale-[100%]`} ${Bebas} pl-14 mt-[2px] text-4xl text-white transition-all duration-300 ease-in-out`}>{item.name}</p>
+                                <p className={`text-3xl ${ProjIndex === (id+1) ? `translate-x-[16px]` : `translate-x-[6px]`} duration-300 transition-all`}>{item.emoji}</p>
+                            </div>
                             <p className={`${Roboto} ${ProjIndex === (id+1) ? `text-neutral-100 scale-[110%]` : `text-neutral-300 scale-[100%] mb-4`} pl-14 text-lg transition-all duration-300 ease-in-out`}>{item.tagline}</p>
                         </div>
                         <div className='absolute right-8 mb-2 rounded-full h-12 w-12'>
@@ -115,7 +121,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
                             />
                         </div>
                     </div>
-                    <div className={`${Roboto} p-6 w-full bg-white h-[30rem] mx-auto text-2xl leading-loose`}>
+                    <div className={`${Roboto} p-6 w-full bg-zinc-100 h-[30rem] mx-auto text-2xl leading-loose`}>
                         <div className={`${id === 0 || id === 2 ? 'float-left pr-6' : 'float-right pl-6'}`}>
                             <div className='relative group w-[30rem] h-[17rem] rounded-md overflow-hidden shadow-md bg-slate-300'>
                                 <Image

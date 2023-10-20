@@ -43,23 +43,17 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
             }
         }
 
+        if (SkillsIndex === 0) {
+            setCurrentTrans('translate-x-[100vw]')
+        } else if (SkillsIndex === 1) {
+            setCurrentTrans('translate-x-[0vw]')
+        } else {
+            setCurrentTrans('translate-x-[-100vw]')
+        }
+
         if (test) {
-            if (SkillsIndex === 0) {
-                setCurrentTrans('translate-x-[100vw]')
-            } else if (SkillsIndex === 1) {
-                setCurrentTrans('translate-x-[0vw]')
-            } else {
-                setCurrentTrans('translate-x-[-100vw]')
-            }
             goForwards()
         } else {
-            if (SkillsIndex === 0) {
-                setCurrentTrans('translate-x-[100vw]')
-            } else if (SkillsIndex === 1) {
-                setCurrentTrans('translate-x-[0vw]')
-            } else {
-                setCurrentTrans('translate-x-[-100vw]')
-            }
             goBack()
         }
         
@@ -96,14 +90,14 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
             <div className={`text-zinc-800 px-20 text-center w-[100vw] text-[4.5rem] md:text-[7rem] leading-[3rem] md:leading-[12rem] flex justify-center items-center md:occShadow ${playball.className}`}>Digital Marketer</div>
         </div>
         <div className='max-w-7xl h-20 w-screen relative flex items-center'>
-            <div onClick={() => skillsController(false)} className={`${SkillsIndex === 0 ? 'hidden' : null } absolute left-0 z-20 hover:cursor-pointer bg-opacity-[15%] hover:bg-opacity-[30%] shadow-md flex justify-center items-center bg-neutral-100 rounded-[100%] h-12 w-12`}>
+            <div onClick={() => skillsController(false)} className={`${SkillsIndex === 0 ? 'hidden opacity-0' : 'opacity-100' } transition-all absolute left-0 z-20 hover:cursor-pointer bg-opacity-[15%] hover:bg-opacity-[30%] shadow-md flex justify-center items-center bg-neutral-100 rounded-[100%] h-12 w-12`}>
                 <Image
                     src={arrow}
                     alt='Menu Arrow Backwards'
                     className='rotate-[180deg] h-6 w-6 mr-1'
                 />
             </div>
-            <div onClick={() => skillsController(true)} className={`${SkillsIndex === 2 ? 'hidden' : null } absolute right-0 z-20 hover:cursor-pointer bg-opacity-[15%] hover:bg-opacity-[30%] shadow-md flex justify-center items-center bg-neutral-100 rounded-[100%] h-12 w-12`}>
+            <div onClick={() => skillsController(true)} className={`${SkillsIndex === 2 ? 'hidden opacity-0' : 'opacity-100' } transition-all absolute right-0 z-20 hover:cursor-pointer bg-opacity-[15%] hover:bg-opacity-[30%] shadow-md flex justify-center items-center bg-neutral-100 rounded-[100%] h-12 w-12`}>
                 <Image
                     src={arrow}
                     alt='Menu Arrow Backwards'
