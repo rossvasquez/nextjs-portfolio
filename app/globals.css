@@ -49,19 +49,18 @@ html {
     height: 10rem;
   }
   to {
-    height: 40rem;
+    height: auto;
   }
 }
 
 .slideIn {
   animation: slideIn 500ms forwards;
   animation-timing-function: ease-in-out;
-  will-change: height;
 }
 
 @keyframes slideOut {
   from {
-    height: 40rem;
+    height: auto;
   }
   to {
     height: 10rem;
@@ -71,7 +70,6 @@ html {
 .slideOut {
   animation: slideOut 500ms forwards;
   animation-timing-function: ease-in-out;
-  will-change: height;
 }
 
 .backgroundGradient {

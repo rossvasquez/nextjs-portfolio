@@ -39,13 +39,13 @@ export default function Marketing({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: st
     const Menu = () =>
     <div className={`${Bebas} h-[calc(100vh-2rem)] md:h-auto flex flex-col gap-4`}>
         <div onClick={() => setMenuState(1)} className='flex h-1/3 group justify-center items-center bg-neutral-800 hover:cursor-pointer hover:bg-opacity-[45%] p-6 bg-opacity-40 shadow-inner rounded-md'>
-            <p className={`py-16 text-white text-5xl md:text-7xl drop-shadow-md group-hover:text-sky-300 group-hover:scale-[103%] transition-all`}>Email Marketing</p>
+            <p className={`py-16 text-white text-5xl md:text-7xl drop-shadow-md group-hover:text-sky-300 group-hover:scale-[103%] w-full text-center transition-all`}>Email Marketing</p>
         </div>
         <div onClick={() => setMenuState(2)} className='flex h-1/3 group justify-center items-center bg-neutral-800 hover:cursor-pointer hover:bg-opacity-[45%] p-6 bg-opacity-40 shadow-inner rounded-md'>
-            <p className={`py-16 text-white text-5xl md:text-7xl drop-shadow-md group-hover:text-sky-300 group-hover:scale-[103%] transition-all`}>Content Marketing</p>
+            <p className={`py-16 text-white text-5xl md:text-7xl drop-shadow-md group-hover:text-sky-300 group-hover:scale-[103%] w-full text-center transition-all`}>Content Marketing</p>
         </div>
         <div onClick={() => setMenuState(3)} className='flex h-1/3 group justify-center items-center bg-neutral-800 hover:cursor-pointer hover:bg-opacity-[45%] p-6 bg-opacity-40 shadow-inner rounded-md'>
-            <p className={`py-16 text-white text-5xl md:text-7xl drop-shadow-md group-hover:text-sky-300 group-hover:scale-[103%] transition-all`}>CRM Marketing</p>
+            <p className={`py-16 text-white text-5xl md:text-7xl drop-shadow-md group-hover:text-sky-300 group-hover:scale-[103%] w-full text-center transition-all`}>CRM Marketing</p>
         </div>
     </div>
 
@@ -129,7 +129,7 @@ export default function Marketing({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: st
 
         return(
             <>
-            <form onSubmit={(e) => emailController(e)} className={`${EmailConfirmed ? 'hidden' : null} mb-6 md:mb-0`}>
+            <form onSubmit={(e) => emailController(e)} className={`${EmailConfirmed ? 'hidden' : null} mb-6 md:mb-0 mt-0 md:mt-4`}>
                 <p className={`py-1 md:hidden text-white ${Roboto} text-2xl mb-4 text-center`}>Enter your email to recieve an automated message</p>
                 <div className={`h-auto p-[4px] w-full rounded-t-[8px] md:rounded-[8px] flex flex-wrap ${Roboto} text-2xl ${Loading ? 'bg-zinc-800' : BgCo} gap-[4px]`}>
                     <input required onChange={(e) => setName(e.target.value)} value={UserInfo.name} type='text' placeholder='First Name' className='shadow-inner grow w-80 h-16 text-zinc-800 rounded-[4px] bg-white focus:outline-none text-center' />
@@ -152,26 +152,28 @@ export default function Marketing({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: st
     
 
     const EmailContent = () => 
-    <div className='-mt-4'>
+    <div className='md:-mt-4'>
         <div onClick={() => setShowInputEmail(true)} className={`${Roboto} ${ShowInputEmail ? 'hidden' : null } md:absolute md:top-[1.7rem] md:left-[21rem] w-full md:w-40 h-14 rounded-md bg-neutral-800 bg-opacity-40 shadow-inner flex justify-center items-center text-2xl text-white hover:cursor-pointer hover:bg-opacity-30 hover:text-sky-100 active:text-white`}>
             Demo Email
         </div>
         {ShowInputEmail && <SendEmail />}
-        <div className='h-auto p-6 w-full bg-neutral-800 shadow-inner bg-opacity-40 rounded-md mt-2 md:mt-6'>
-                <div className='float-right ml-8 mr-4 h-60 w-60 rounded-[100%] overflow-hidden bg-white shadow-md flex justify-center items-center'>
+        <div className='h-auto p-6 w-full bg-neutral-800 flex md:block flex-col items-center shadow-inner bg-opacity-40 rounded-md mt-2 md:mt-6'>
+                <div className='md:float-right md:ml-8 md:mr-4 h-60 w-60 rounded-[100%] overflow-hidden bg-white shadow-md flex justify-center items-center'>
                     <Image
                         src={emailjs}
                         alt='emailjs'
                         className='h-3/4 w-auto'
                     />
                 </div>
-            <p className={`text-white text-3xl ${Roboto1} leading-[4rem] mb-4`}>I have experience using multiple tools to related to email marketing. The first is EmailJS. This service allows you to create HTML and CSS templates in their WebApp. From there you can add dynamic content and send the email via a trigger in JavaScript.</p>
+            <p className={`mb-4 mt-4 md:mt-0 text-white text-2xl md:text-3xl ${Roboto1} leading-[3rem] md:leading-[4rem] text-center md:text-left`}>I have experience using multiple tools to related to email marketing. The first is EmailJS. This service allows you to create HTML and CSS templates in their WebApp. From there you can add dynamic content and send the email via a trigger in JavaScript.</p>
+        </div>
+        <div className='h-auto p-6 w-full bg-neutral-800 flex md:block flex-col items-center shadow-inner bg-opacity-40 rounded-md mt-2 md:mt-6'>
             <Image
                     src={mailchimp}
                     alt='Mailchimp'
-                    className='mr-8 ml-4 float-left h-60 w-60 rounded-[100%] shadow-md'
+                    className='md:mr-8 md:ml-4 md:float-left h-60 w-60 rounded-[100%] shadow-md'
                 />
-            <p className={`text-white text-3xl ${Roboto1} leading-[4rem] text-right`}>The second is Mailchimp. I have used it to build surveys and create email templates. I also use it to track analytics related to those features. Mailchimp provides automations similiar to Salesforce Marketing Cloud workflows.</p>
+            <p className={`text-white text-2xl md:text-3xl ${Roboto1} leading-[3rem] md:leading-[4rem] text-center md:text-right mt-4 md:mt-0`}>The second is Mailchimp. I have used it to build surveys and create email templates. I also use it to track analytics related to those features. Mailchimp provides automations similiar to Salesforce Marketing Cloud workflows.</p>
         </div>
     </div>
 
@@ -198,18 +200,18 @@ export default function Marketing({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: st
 
     const CRMContent = () =>
     <div>
-        <div className='h-auto p-6 w-full bg-neutral-800 shadow-inner bg-opacity-40 rounded-md'>
+        <div className='h-auto p-6 w-full flex md:block flex-col items-center bg-neutral-800 shadow-inner bg-opacity-40 rounded-md'>
             <Image
                 src={mcloud}
                 alt="Salesforce Marketing Cloud"
                 className='px-6 pb-6 md:p-0 md:w-60 h-auto md:float-right md:mr-10'
             />
-            <p className={`text-white text-2xl md:text-3xl ${Roboto1} leading-[3rem] md:leading-[4rem]`}>Utilizing CRM records to automate marketing as well as collecting data for storage in a CRM is an important aspect of a well oiled business. Utilizing Salesforce Marketing Cloud to create workflows can be a great way to solve this. VisualForce pages are also another common use case to collect data. I learned about these concepts while studying for my certification exam through hands on learning modules in Trailhead. With an extensive array of third-party integrations on AppExchange and the ability to communicate with data directly via API, the sky is the limit. Whether you&#39;re using Salesforce or another CRM/CMS, marketing automation is something I feel confident in working with.</p>
+            <p className={`text-white text-2xl md:text-3xl ${Roboto1} text-center md:text-left leading-[3rem] md:leading-[4rem]`}>Utilizing CRM records to automate marketing as well as collecting data for storage in a CRM is an important aspect of a well oiled business. Utilizing Salesforce Marketing Cloud to create workflows can be a great way to solve this. VisualForce pages are also another common use case to collect data. I learned about these concepts while studying for my certification exam through hands on learning modules in Trailhead. With an extensive array of third-party integrations on AppExchange and the ability to communicate with data directly via API, the sky is the limit. Whether you&#39;re using Salesforce or another CRM/CMS, marketing automation is something I feel confident in working with.</p>
         </div>
     </div>
 
     return(
-        <div className="flex flex-col justify-center items-center bg-gradient-to-tr from-cyan-500 via-blue-500 md:px-2 to-teal-200 min-h-[100vh] h-auto w-screen h-auto">
+        <div className="flex flex-col justify-center pb-0 md:pb-6 items-center bg-gradient-to-tr from-cyan-500 via-blue-500 md:px-2 to-teal-200 min-h-[100vh] h-auto w-screen h-auto">
             <div className='relative flex flex-col max-w-7xl w-full bg-neutral-800 p-4 md:p-6 md:rounded-md bg-opacity-[30%] md:mt-6 justify-center'>
                 {MenuState != 0 && <Back />}
                 {MenuState === 0 && <Menu />}

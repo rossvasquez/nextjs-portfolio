@@ -51,17 +51,17 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
     }
 
     const Content = () =>
-    <div className='w-full flex flex-col justify-center items-center overflow-hidden max-w-7xl mx-auto h-auto mt-6 shadow-md bg-neutral-800 p-4 rounded-[6px] bg-opacity-[30%]'>
-        <div className='shadow-md mb-4 bg-zinc-800 w-full rounded-md'>
-            <p className={`${Bebas} text-6xl text-white mt-8 w-full text-center`}>Full Stack Web App Development</p>
-            <p className={`${Roboto1} text-white text-4xl text-center mt-2 mb-8`}>{getSkill()}</p>
+    <div className='w-full flex flex-col justify-center items-center overflow-hidden max-w-7xl mx-auto h-auto md:mt-6 shadow-md bg-neutral-800 p-2 md:p-4 md:rounded-[6px] bg-opacity-[30%]'>
+        <div className='shadow-inner px-2 mb-2 md:mb-4 bg-neutral-800 bg-opacity-[40%] w-full rounded-md'>
+            <p className={`${Bebas} text-5xl md:text-6xl text-white mt-8 w-full text-center`}>Full Stack Web App Development</p>
+            <p className={`${Roboto1} text-white text-3xl md:text-4xl text-center mt-2 mb-8`}>{getSkill()}</p>
         </div>
-        <div className='flex flex-col justify-center bg-neutral-800 rounded-[6px] bg-opacity-[40%] shadow-inner px-8 pb-6 items-center w-full h-full'>
+        <div className='flex flex-col justify-center bg-neutral-800 rounded-[6px] bg-opacity-[40%] shadow-inner px-14 py-6 items-center w-full h-full'>
             {SkillDes.map((item, id) => 
             <div key={id} className={`w-full h-auto flex flex-wrap justify-center mb-6 gap-x-16 md:gap-x-14 transition-all ${WebSkillIndex === id ? 'opacity-100' : 'opacity-0 hidden'}`}>
                 {item.map((child) => 
-                    <div key={child.name} className={`h-32 md:h-[16rem] flex flex-col justify-center relative items-center md:py-6 ${WebSkillIndex === 1 ? 'md:px-6' : 'md:px-16'} rounded-[4px]`}>
-                        <div className='h-3/4 w-full'>
+                    <div key={child.name} className={`mt-6 md:mt-0 flex flex-col justify-center items-center md:py-6 ${WebSkillIndex === 1 ? 'md:px-6' : 'md:px-16'} rounded-[4px]`}>
+                        <div className='h-24 md:h-32 w-full flex justify-center'>
                             <Image
                                 alt={`${child.name} Logo`}
                                 src={child.image}
@@ -69,7 +69,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
                                 priority
                             />
                         </div>
-                        <p className={`text-white ${Roboto1} text-3xl h-auto absolute bottom-0 drop-shadow-md`}>{child.name}</p>
+                        <p className={`text-white ${Roboto1} text-2xl md:text-3xl h-auto mt-2 md:bottom-0 drop-shadow-md`}>{child.name}</p>
                     </div>
                 )}
             </div>
@@ -94,24 +94,24 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
                 </div>
             </div>
         </div>
-        <div className='flex justify-center items-center bg-neutral-800 p-6 bg-opacity-40 shadow-inner rounded-md mt-4'>
-            <p className={`${Roboto} text-3xl text-white leading-[4rem]`}>As a Certified Salesforce Administrator I understand the purpose and opportunity present in the CRM Ecosystem. Through APIs auxillary means such as Email Marketing or JavaScript WebApps, we can extend the manipulation and presentation of data in a central location for better business operations. Creating flows and attaching them to these nodes of extension is a crucial piece of BPA for modern businesses. With the power of NextJS, Salesforce and other CRM APIs can easily be called upon in server components to perform actions. Whether Salesforce or one of the many other CRM/CMS platforms available, I feel confident in my ability to create solutions.</p>
+        <div className='flex justify-center items-center bg-neutral-800 p-6 bg-opacity-40 shadow-inner rounded-md mt-2 md:mt-4'>
+            <p className={`text-white text-2xl md:text-3xl ${Roboto1} leading-[3rem] md:leading-[4rem]`}>From creating basic Shopify websites in High School, to my first basic application in Kivy (Python). I always knew I was interested in software, but never fully realized I wanted to develop. That was until I completed my Salesforce Administrator Certification. After learning of JavaScript Development in Salesforce, I accidentally dove head first into the web. I began by creating a VanillaJS Catering Order App for the local restaurant I helped manage. From there, it has been over a year of learning what it means to create a modern full stack application through hands on experience. I have worked with various JavaScript Frameworks and Tools, as well as Backend Services beyond JavaScript. I've learned what allows the world to consume, transfer, and reflect data between itself. I am excited and optimistic about development and greatly enjoy the ability to create bespoke solutions that others can interact with.</p>
         </div>
     </div>
 
     const projects = () =>
-    <div className="relative overflow-hidden w-full h-full flex flex-col max-w-7xl mt-2">
+    <div className="relative overflow-hidden w-full h-full flex flex-col max-w-7xl px-2 md:px-0">
         {ProjInfo.map((item, id) =>
             <div key={item.name} className={`shadow-sm flex justify-center items-center bg-gradient-to-tr ${ProjIndex === (id+1) ? 'from-cyan-500 shadow-md' : 'from-teal-200 hover:translate-y-[-2px] hover:shadow-md hover:from-blue-500 hover:to-teal-200'} to-blue-500 mt-4 transition-all duration-800 overflow-hidden rounded-md rounded-[4px]`}>
-                <div className={`overflow-hidden transition-[height] duration-300 ease-in-out ${ProjIndex === (id+1) ? 'h-[40rem]' : 'h-[10rem] pt-[8px] relative'}`}>
+                <div className={`overflow-hidden transition-[height] duration-300 ease-in-out ${ProjIndex === (id+1) ? 'h-auto' : 'h-[10rem] pt-[8px] relative'}`}>
                     <div onClick={ProjIndex === (id+1) ? () => setProjIndex(0) : () => setProjIndex(id+1)} className='hover:cursor-pointer absolute w-full h-[10rem] z-20'/>
                     <div className={`w-full flex items-center relative h-40 transition-all duration-300 ease-in-out ${ProjIndex === (id+1) ? 'bg-transparent' : 'bg-zinc-800'} first:mt-0 shadow-md`}>
-                        <div>
-                            <div className='flex'>
-                                <p className={`${ProjIndex === (id+1) ? `scale-[110%]` : `scale-[100%]`} ${Bebas} pl-14 mt-[2px] text-4xl text-white transition-all duration-300 ease-in-out`}>{item.name}</p>
+                        <div className='w-full'>
+                            <div className='flex w-3/4'>
+                                <p className={`${ProjIndex === (id+1) ? `scale-[110%]` : `scale-[100%]`} ${Bebas} pl-6 md:pl-14 mt-[2px] text-4xl text-white transition-all duration-300 ease-in-out`}>{item.name}</p>
                                 <p className={`text-3xl ${ProjIndex === (id+1) ? `translate-x-[16px]` : `translate-x-[6px]`} duration-300 transition-all`}>{item.emoji}</p>
                             </div>
-                            <p className={`${Roboto} ${ProjIndex === (id+1) ? `text-neutral-100 scale-[110%]` : `text-neutral-300 scale-[100%] mb-4`} pl-14 text-lg transition-all duration-300 ease-in-out`}>{item.tagline}</p>
+                            <p className={`${Roboto} ${ProjIndex === (id+1) ? `text-neutral-100` : `text-neutral-300 scale-[100%] mb-4`} w-auto pl-6 md:pl-14 text-lg transition-all duration-300 ease-in-out`}>{item.tagline}</p>
                         </div>
                         <div className='absolute right-8 mb-2 rounded-full h-12 w-12'>
                             <Image
@@ -121,9 +121,9 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
                             />
                         </div>
                     </div>
-                    <div className={`${Roboto} p-6 w-full bg-zinc-100 h-[30rem] mx-auto text-2xl leading-loose`}>
-                        <div className={`${id === 0 || id === 2 ? 'float-left pr-6' : 'float-right pl-6'}`}>
-                            <div className='relative group w-[30rem] h-[17rem] rounded-md overflow-hidden shadow-md bg-slate-300'>
+                    <div className={`${Roboto} p-0 md:p-6 w-full bg-zinc-100 h-auto mx-auto text-2xl leading-loose`}>
+                        <div className={`${id === 0 || id === 2 ? 'md:float-left md:pr-6' : 'md:float-right md:pl-6'}`}>
+                            <div className='relative group w-auto md:w-[30rem] h-[11rem] md:h-[17rem] md:rounded-md overflow-hidden shadow-md bg-slate-300'>
                                 <Image
                                     src={item.image}
                                     alt={`${item.name} Site Logo`}
@@ -137,7 +137,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
                                 </div>
                             </div>
                         </div>
-                        <p className='-mt-2'>{item.description}</p>
+                        <p className='-mt-2 p-4 md:p-0'>{item.description}</p>
                     </div>
                 </div>
             </div>
@@ -145,7 +145,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
     </div> 
 
     return(
-        <div className="flex flex-col justify-center items-center pb-8 bg-gradient-to-tr from-cyan-500 via-blue-500 px-2 to-teal-200 h-auto w-screen h-auto">
+        <div className="flex flex-col justify-center items-center pb-8 bg-gradient-to-tr from-cyan-500 via-blue-500 md:px-2 to-teal-200 h-auto w-screen h-auto">
             <Content />
             {projects()}
         </div>
