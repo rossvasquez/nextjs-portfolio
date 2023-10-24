@@ -99,11 +99,15 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
         </div>
     </div>
 
+    const isEven = (number: any) => {
+        return number % 2 === 0
+    }
+
     const projects = () =>
     <div className="relative overflow-hidden w-full h-full flex flex-col max-w-7xl px-2 md:px-0">
         {ProjInfo.map((item, id) =>
             <div key={item.name} className={`shadow-sm flex justify-center items-center bg-gradient-to-tr ${ProjIndex === (id+1) ? 'from-cyan-500 shadow-md' : 'from-teal-200 hover:translate-y-[-2px] hover:shadow-md hover:from-blue-500 hover:to-teal-200'} to-blue-500 mt-4 transition-all duration-800 overflow-hidden rounded-md rounded-[4px]`}>
-                <div className={`overflow-hidden transition-[height] duration-300 ease-in-out ${ProjIndex === (id+1) ? 'h-auto' : 'h-[10rem] pt-[8px] relative'}`}>
+                <div className={`overflow-hidden transition-[height] duration-300 w-full ease-in-out ${ProjIndex === (id+1) ? 'h-auto' : 'h-[10rem] pt-[8px] relative'}`}>
                     <div onClick={ProjIndex === (id+1) ? () => setProjIndex(0) : () => setProjIndex(id+1)} className='hover:cursor-pointer absolute w-full h-[10rem] z-20'/>
                     <div className={`w-full flex items-center relative h-40 transition-all duration-300 ease-in-out ${ProjIndex === (id+1) ? 'bg-transparent' : 'bg-zinc-800'} first:mt-0 shadow-md`}>
                         <div className='w-full'>
@@ -121,23 +125,28 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: s
                             />
                         </div>
                     </div>
-                    <div className={`${Roboto} p-0 md:p-6 w-full bg-zinc-100 h-auto mx-auto text-2xl leading-loose`}>
-                        <div className={`${id === 0 || id === 2 ? 'md:float-left md:pr-6' : 'md:float-right md:pl-6'}`}>
-                            <div className='relative group w-auto md:w-[30rem] h-[11rem] md:h-[17rem] md:rounded-md overflow-hidden shadow-md bg-slate-300'>
+                    <div className={`${Roboto} p-0 md:p-6 w-full bg-zinc-100 min-h-[20rem] relative h-auto mx-auto text-2xl leading-loose`}>
+                        <div className={`${id === 0 || isEven(id) ? 'md:float-left md:pr-6' : 'md:float-right md:pl-6'}`}>
+                            <div className='relative group w-auto md:w-[30rem] h-auto md:h-[18rem] md:rounded-md overflow-hidden shadow-md bg-slate-300'>
                                 <Image
                                     src={item.image}
                                     alt={`${item.name} Site Logo`}
-                                    className='relative z-10 w-full h-auto'
+                                    className={`${item.name == 'State Fairdle' ? '-mt-12' : null } relative z-10 w-full h-auto`}
                                     priority
                                 />
                                 <div className='absolute z-20 top-0 flex justify-center items-center w-full h-full bg-zinc-800 bg-opacity-0 opacity-0 group-hover:bg-opacity-[60%] group-hover:opacity-100 group-hover:cursor-pointer'>
-                                    <div className={`py-3 px-10 flex justify-center bg-zinc-800 bg-opacity-100 hover:border-[.1rem] border-opacity-60 border-white shadow-inner rounded-[4px] text-white items-center ${Roboto2}`}>
+                                    <a href={item.link} target='_blank' className={`py-3 px-10 flex justify-center bg-zinc-800 bg-opacity-100 hover:border-[.1rem] border-opacity-60 border-white shadow-inner rounded-[4px] text-white items-center ${Roboto}`}>
                                         Visit Site
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <p className='-mt-2 p-4 md:p-0'>{item.description}</p>
+                        <p className={`-mt-2 p-4 md:mb-6 md:p-0 text-xl md:text-2xl leading-[2.7rem] md:leading-[3rem]`}>{item.description}</p>
+                        <div className={`px-4 md:px-0 relative md:absolute bottom-4 ${id === 0 || isEven(id) ? 'md:right-6' : 'md:left-6'} flex flex-wrap`}>
+                            {item.with.map((tool, id) =>
+                                <p className={`${Roboto} text-lg`} key={id}><span className='underline'>{tool}</span>{(id+1) === item.with.length ? '' : `,`}&nbsp;</p>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
