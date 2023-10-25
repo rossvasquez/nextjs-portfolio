@@ -32,14 +32,20 @@ export default function Home() {
   const scrollToSection = () => {
     let targetY = 0
     if (SkillsIndex === 0) {
+      if (webRef.current != null) {
       const nums = webRef.current.getBoundingClientRect()
       targetY = nums.top
+      }
     } else if (SkillsIndex === 1) {
+      if (crmRef.current != null) {
       const nums = crmRef.current.getBoundingClientRect()
       targetY = nums.top
+      }
     } else {
+      if (marketingRef.current != null) {
       const nums = marketingRef.current.getBoundingClientRect()
       targetY = nums.top
+      }
     }
     window.scrollTo({
       top: targetY,
@@ -47,9 +53,9 @@ export default function Home() {
     })
   }
 
-  const webRef = useRef(null)
-  const crmRef = useRef(null)
-  const marketingRef = useRef(null)
+  const webRef = useRef<HTMLDivElement>(null)
+  const crmRef = useRef<HTMLDivElement>(null)
+  const marketingRef = useRef<HTMLDivElement>(null)
   
   return (
     <main className='select-none'>
