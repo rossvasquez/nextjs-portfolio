@@ -30,7 +30,7 @@ import { sendEmailController } from './emailController'
 
 import { useState } from 'react'
 
-export default function Marketing({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: string, Bebas: string, Roboto1: string, Roboto2: string}) {
+export default function Marketing({Roboto, Bebas, Roboto1, Roboto2, refer}: {Roboto: string, Bebas: string, Roboto1: string, Roboto2: string, refer: any}) {
 
     const [MenuState, setMenuState] = useState(0)
 
@@ -38,13 +38,13 @@ export default function Marketing({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: st
 
     const Menu = () =>
     <div className={`${Bebas} h-[calc(100vh-2rem)] md:h-auto flex flex-col gap-4`}>
-        <div onClick={() => setMenuState(1)} className='flex h-1/3 group justify-center items-center bg-neutral-800 hover:cursor-pointer hover:bg-opacity-[45%] p-6 bg-opacity-40 shadow-inner rounded-md'>
+        <div onClick={() => setMenuState(1)} className='flex h-1/3 group justify-center items-center bg-neutral-800 hover:cursor-pointer hover:bg-opacity-[60%] p-6 bg-opacity-50 hover:shadow-md shadow-inner rounded-md'>
             <p className={`py-16 text-white text-5xl md:text-7xl drop-shadow-md group-hover:text-sky-300 group-hover:scale-[103%] w-full text-center transition-all`}>Email Marketing</p>
         </div>
-        <div onClick={() => setMenuState(2)} className='flex h-1/3 group justify-center items-center bg-neutral-800 hover:cursor-pointer hover:bg-opacity-[45%] p-6 bg-opacity-40 shadow-inner rounded-md'>
+        <div onClick={() => setMenuState(2)} className='flex h-1/3 group justify-center items-center bg-neutral-800 hover:cursor-pointer hover:bg-opacity-[60%] p-6 bg-opacity-50 hover:shadow-md shadow-inner rounded-md'>
             <p className={`py-16 text-white text-5xl md:text-7xl drop-shadow-md group-hover:text-sky-300 group-hover:scale-[103%] w-full text-center transition-all`}>Content Marketing</p>
         </div>
-        <div onClick={() => setMenuState(3)} className='flex h-1/3 group justify-center items-center bg-neutral-800 hover:cursor-pointer hover:bg-opacity-[45%] p-6 bg-opacity-40 shadow-inner rounded-md'>
+        <div onClick={() => setMenuState(3)} className='flex h-1/3 group justify-center items-center bg-neutral-800 hover:cursor-pointer hover:bg-opacity-[60%] p-6 bg-opacity-50 hover:shadow-md shadow-inner rounded-md'>
             <p className={`py-16 text-white text-5xl md:text-7xl drop-shadow-md group-hover:text-sky-300 group-hover:scale-[103%] w-full text-center transition-all`}>CRM Marketing</p>
         </div>
     </div>
@@ -63,13 +63,13 @@ export default function Marketing({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: st
     }
 
     const Back = () =>
-    <div className='flex items-center w-full relative h-auto md:h-16 mb-4'>
+    <div className='flex items-center w-full relative h-auto py-4 md:py-0 md:h-16 mb-4'>
         <p className={`${Bebas} text-5xl md:pl-6 text-white drop-shadow-md w-3/4`}>
             {MenuState === 1 ? 'Email Marketing' : null}
             {MenuState === 2 ? 'Content Marketing' : null}
             {MenuState === 3 ? 'CRM Marketing' : null}
         </p>
-        <div onClick={() => backFunc()} className='absolute hover:bg-neutral-800 hover:bg-opacity-40 hover:cursor-pointer hover:shadow-inner right-0 md:right-4 h-16 w-16 rounded-full flex justify-center items-center'>
+        <div onClick={() => backFunc()} className='absolute hover:bg-neutral-800 hover:bg-opacity-40 hover:cursor-pointer hover:shadow-inner right-0 md:right-4 -translate-y-1 h-16 w-16 rounded-full flex justify-center items-center'>
             <Image
                 src={circle_arrow}
                 alt='Back to Marketing Content'
@@ -211,8 +211,8 @@ export default function Marketing({Roboto, Bebas, Roboto1, Roboto2}: {Roboto: st
     </div>
 
     return(
-        <div className="flex flex-col justify-center pb-0 md:pb-6 items-center bg-gradient-to-tr from-cyan-500 via-blue-500 md:px-2 to-teal-200 min-h-[100vh] h-auto w-screen h-auto">
-            <div className='relative flex flex-col max-w-7xl w-full bg-neutral-800 p-4 md:p-6 md:rounded-md bg-opacity-[30%] md:mt-6 justify-center'>
+        <div ref={refer} className="flex flex-col justify-center pb-0 md:pb-6 items-center bg-gradient-to-tr from-cyan-500 via-blue-500 md:px-2 to-teal-200 min-h-[100vh] h-auto w-screen h-auto">
+            <div className={`relative flex flex-col max-w-7xl w-full ${MenuState === 0 ? null : 'bg-neutral-800'} p-4 md:p-6 md:rounded-md bg-opacity-[30%] md:mt-6 justify-center`}>
                 {MenuState != 0 && <Back />}
                 {MenuState === 0 && <Menu />}
                 {MenuState === 1 && <EmailContent />}

@@ -21,9 +21,10 @@ type MainSkillsProps = {
     Roboto: string;
     SkillsIndex: number;
     setSkillsIndex: React.Dispatch<React.SetStateAction<number>>;
+    scrollToIt: any;
 };
 
-export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsIndex, setSkillsIndex }) => {
+export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsIndex, setSkillsIndex, scrollToIt }) => {
 
     const [Skills, setSkills] = useState(["Web Developer", "CRM Specialist", "Digital Marketer"])
 
@@ -59,14 +60,6 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
         
     }
 
-    const scrollToSection = () => {
-      const targetY = window.innerHeight
-      window.scrollTo({
-        top: targetY,
-        behavior: 'smooth'
-      })
-    }
-
     const getBtnLabel = () => {
         if (SkillsIndex === 0) {
             return 'Portfolio'
@@ -78,7 +71,7 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
     }
 
     const ScrollDown = () =>
-    <div onClick={() => scrollToSection()} className={`relative z-30 w-80 h-20 mx-auto bg-opacity-[15%] shadow-md bg-neutral-100 -mt-0 md:-mt-16 rounded-[6px] ${Bebas} flex justify-center transition-all items-center text-5xl text-sky-200 pt-1 hover:text-neutral-100 hover:cursor-pointer active:bg-opacity-[30%]`}>
+    <div onClick={() => scrollToIt()} className={`relative z-30 w-80 h-20 mx-auto bg-opacity-[15%] shadow-md bg-neutral-100 -mt-0 md:-mt-16 rounded-[6px] ${Bebas} flex justify-center transition-all items-center text-5xl text-sky-200 pt-1 hover:text-neutral-100 hover:cursor-pointer active:bg-opacity-[30%]`}>
         {getBtnLabel()}
     </div>
 

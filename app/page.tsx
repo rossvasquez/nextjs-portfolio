@@ -1,5 +1,7 @@
 'use client'
 
+// @ts-nocheck
+
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -10,7 +12,7 @@ import WebContent from './homepage_components/skills/webContent'
 import CRMContent from './homepage_components/crmContent'
 import Marketing from './homepage_components/marketingContent'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 import background from '../public/background.jpg'
 
@@ -26,6 +28,28 @@ export default function Home() {
 
   const [SkillsIndex, setSkillsIndex] = useState(0)
   const [Page, setPage] = useState(1)
+
+  const scrollToSection = () => {
+    let targetY = 0
+    if (SkillsIndex === 0) {
+      const nums = webRef.current.getBoundingClientRect()
+      targetY = nums.top
+    } else if (SkillsIndex === 1) {
+      const nums = crmRef.current.getBoundingClientRect()
+      targetY = nums.top
+    } else {
+      const nums = marketingRef.current.getBoundingClientRect()
+      targetY = nums.top
+    }
+    window.scrollTo({
+      top: targetY,
+      behavior: 'smooth'
+    })
+  }
+
+  const webRef = useRef(null)
+  const crmRef = useRef(null)
+  const marketingRef = useRef(null)
   
   return (
     <main className='select-none'>
@@ -39,7 +63,7 @@ export default function Home() {
           </div>
         </div>
         { Page === 1 ?
-        <MainSkills Roboto={roboto.className} SkillsIndex={SkillsIndex} Bebas={playfair.className} setSkillsIndex={setSkillsIndex} />
+        <MainSkills Roboto={roboto.className} SkillsIndex={SkillsIndex} Bebas={playfair.className} setSkillsIndex={setSkillsIndex} scrollToIt={scrollToSection} />
         : null }
         { Page === 2 ?
         <About Bebas={playfair.className} Roboto={roboto.className} Roboto1={roboto1.className} />
@@ -48,9 +72,9 @@ export default function Home() {
         <Contact Bebas={playfair.className} Roboto={roboto.className} Roboto1={roboto1.className} />
         : null }
       </div>
-      {SkillsIndex === 0 ? <WebContent Roboto={roboto.className} Bebas={playfair.className} Roboto1={roboto1.className} Roboto2={roboto2.className} /> : null}
-      {SkillsIndex === 1 ? <CRMContent Bebas={playfair.className} Roboto={roboto1.className} /> : null}
-      {SkillsIndex === 2 ? <Marketing Roboto={roboto.className} Bebas={playfair.className} Roboto1={roboto1.className} Roboto2={roboto2.className} /> : null}
+      {SkillsIndex === 0 ? <WebContent refer={webRef} Roboto={roboto.className} Bebas={playfair.className} Roboto1={roboto1.className} Roboto2={roboto2.className} /> : null}
+      {SkillsIndex === 1 ? <CRMContent refer={crmRef} Bebas={playfair.className} Roboto={roboto1.className} /> : null}
+      {SkillsIndex === 2 ? <Marketing refer={marketingRef} Roboto={roboto.className} Bebas={playfair.className} Roboto1={roboto1.className} Roboto2={roboto2.className} /> : null}
     </main>
   )
 }
