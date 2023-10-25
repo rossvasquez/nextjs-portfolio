@@ -4,6 +4,8 @@ import mockUpIPHONE from '../../../public/websites/mockUpIPHONE.png'
 import walletEval from '../../../public/websites/walletEval.png'
 import zmariks from '../../../public/websites/zmariks.png'
 import cateringOrderSystem from '../../../public/websites/cateringOrderSystem.png'
+import psd from '../../../public/websites/psd.png'
+import reactpress from '../../../public/websites/reactpress.png'
 
 export const projectInfo = [
     {
@@ -32,7 +34,7 @@ export const projectInfo = [
         "description1": "My love for JavaScript doesn't touch the industry's love for WordPress. With this in mind I used a WP plugin called ReactPress to create a Cocktail Finder with React that is embedded into a WordPress page. The component is styled with TailwindCSS and a Cloudflare Worker is responsible for returning JSON from a Random Cocktail API.",
         "description2": 'Hover the image to head to the site, refresh to generate fresh recipes, cheers!',
         "with": ['JavaScript', 'React', 'Vite', 'TailwindCSS', 'WordPress', 'ReactPress', 'Cloudflare', 'Flywheel', 'LocalWP', 'API'],
-        "image": tiden,
+        "image": reactpress,
         "link": 'https://reactpressdemo.flywheelsites.com/cocktail-finder/',
         "emoji":'🍸'
     },
@@ -62,7 +64,7 @@ export const projectInfo = [
         "description1": "A technical evaluation where I was sent a PSD file and told to create a functioning site to match it. Site is fully responsive and looks the exact same.",
         "description2": '',
         "with": ['Photoshop', 'JavaScript', 'React', 'Vite', 'TailwindCSS', 'Netlify'],
-        "image": tiden,
+        "image": psd,
         "link": 'https://psdtowebpractice.netlify.app/',
         "emoji":'🍝'
     },

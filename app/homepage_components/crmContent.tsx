@@ -5,7 +5,7 @@ import admin from '../../public/admin.png'
 export default function CRMContent({Bebas, Roboto, refer}: {Bebas: string, Roboto: string, refer: any}) {
 
     return(
-        <div ref={refer} className={`flex flex-col justify-center items-center bg-gradient-to-tr from-cyan-500 via-blue-500 to-teal-200 h-auto w-full h-auto md:px-2 md:pb-2 ${Roboto}`}>
+        <div ref={refer} className={`flex flex-col justify-center items-center bg-gradient-to-tr from-cyan-500 via-blue-500 to-teal-200 h-auto w-full h-auto md:px-2 pb-6 md:pb-2 ${Roboto}`}>
             <div className='p-2 md:p-4'>
                 <div className='flex flex-col md:flex-row max-w-7xl bg-neutral-800 p-10 md:p-20 rounded-md bg-opacity-[60%] shadow-inner justify-center items-center'>
                     <div className='w-full md:w-1/2 flex justify-center items-center'>

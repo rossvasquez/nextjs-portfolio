@@ -28,24 +28,26 @@ export default function About({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto: s
     ])
 
     return(
-        <div className='w-full max-w-7xl md:p-2 mt-28 md:mb-8'>
+        <div className='w-full max-w-7xl md:p-2 mt-28 md:mb-8 pb-8 md:pb-2'>
           <div className='w-full h-auto md:p-0 p-2'>
             <div className='flex flex-col md:flex-row-reverse bg-neutral-800 bg-opacity-60 shadow-inner overflow-hidden rounded-md w-full justify-center items-center'>
                 <div className='w-full md:w-1/2 flex justify-center md:justify-normal md:pl-8 items-center'>
                     <div className='h-full flex justify-center items-end w-full'>
+                        <div className='shadow-md bg-zinc-300 bg-opacity-40 mt-6 w-[18rem] md:w-[30rem] h-[18rem] md:h-[30rem] overflow-hidden rounded-[100%]'>
                         <Image
                             src={me}
                             alt='Picture of Ross Vasquez'
-                            className='w-3/4 md:w-[30rem] h-auto md:translate-y-12 drop-shadow-md'
+                            className='w-full md:w-[30rem] h-auto md:translate-y-12 drop-shadow-md'
                             priority
                         />
+                        </div>
                     </div>
                 </div>
-                <div className='relative w-full md:w-1/2 py-6 rounded-md md:shadow-none h-full flex flex-col justify-center items-center mt-6 md:mt-0'>
+                <div className='relative w-full md:w-1/2 py-6 rounded-md md:shadow-none h-full flex flex-col justify-center items-center'>
                     <p className={`w-full md:w-[30rem] text-center md:text-right text-7xl md:text-8xl text-white drop-shadow-md ${Bebas}`}>Ross Vasquez</p>
                     <p className={`w-full md:w-[30rem] text-center md:text-right text-4xl text-white drop-shadow-md ${Bebas}`}>Des Moines, IA</p>
                     <div className='relative w-[30rem] mt-6 h-24'>
-                        <div className='md:absolute md:right-0 flex justify-center items-center w-auto gap-10'>
+                        <div className='scale-[90%] md:scale-[100%] md:absolute md:right-0 flex justify-center items-center w-auto gap-10'>
                         {Icons.map((icon, id) =>
                             <a key={id} href={icon.url} target='_blank' className={`${id === 2 ? 'mt-2' : null } h-16 w-16 flex`}>
                                 <Image
@@ -59,7 +61,7 @@ export default function About({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto: s
                         </div>
                     </div>
                     <div className='relative flex justify-center w-full md:w-[30rem] md:h-14 mt-2'>
-                        <a href='/about/CV.pdf' target='_blank' className='w-52 md:absolute flex justify-center bg-gradient-to-br from-blue-500 to-cyan-500 items-center right-0 hover:bg-neutral-800 active:text-neutral-300 hover:bg-opacity-40 text-white hover:text-opacity-80 hover:scale-[103%] transition-all hover:cursor-pointer md:px-14 h-20 rounded-[70px] pb-[2px] shadow-md'>
+                        <a href='/about/CV.pdf' target='_blank' className='w-52 mb-2 md:mb-0 md:absolute flex justify-center bg-gradient-to-br from-blue-500 to-cyan-500 items-center right-0 hover:bg-neutral-800 active:text-neutral-300 hover:bg-opacity-40 text-white hover:text-opacity-80 hover:scale-[103%] transition-all hover:cursor-pointer md:px-14 h-20 rounded-[70px] pb-[2px] shadow-md'>
                             <p className={`${Roboto1} text-3xl`}>Resume</p>
                         </a>
                     </div>

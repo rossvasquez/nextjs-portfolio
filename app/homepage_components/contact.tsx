@@ -48,7 +48,7 @@ export default function Contact({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto:
     <>
     <p className={`${Bebas} text-white px-4 pt-8 md:px-0 md:pt-0 text-6xl`}>Reach Out!</p>
     <p className={`${Roboto1} text-white px-4 md:px-0 text-3xl`}>We would love to hear from you.</p>
-    <form className='px-2 pb-6 md:pb-0 md:px-0' onSubmit={(e) => formHandler(e)}>
+    <form className='px-2 pb-8 md:pb-0 md:px-0' onSubmit={(e) => formHandler(e)}>
         <p className={`${Bebas} bg-zinc-800 text-zinc-100 py-3 w-52 pb-2 text-center rounded-tl-[18px] rounded-tr-[18px] text-3xl mt-8`}>Info</p>
         <div className="bg-neutral-800 bg-opacity-[40%] shadow-inner relative rounded-[4px] rounded-tl-[0px] p-4">
             <div className="">
