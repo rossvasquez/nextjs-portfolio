@@ -41,7 +41,7 @@ export default function Home() {
       const nums = crmRef.current.getBoundingClientRect()
       targetY = nums.top
       }
-    } else {
+    } else if (SkillsIndex === 2) {
       if (marketingRef.current != null) {
       const nums = marketingRef.current.getBoundingClientRect()
       targetY = nums.top

@@ -111,7 +111,7 @@ export default function Marketing({Roboto, Bebas, Roboto1, Roboto2, refer}: {Rob
                 setLoading(false)
             } else {
                 setLoading(false)
-                window.alert('Problem sending email. If error persists please email Ross at thomasross.vasquez@gmail.com')
+                window.alert(`Problem sending email, please retry. If error persists please email Ross at thomasross.vasquez@gmail.com.`)
             }
         }
     
@@ -185,11 +185,11 @@ export default function Marketing({Roboto, Bebas, Roboto1, Roboto2, refer}: {Rob
         <div className='h-auto p-6 mt-6 w-full bg-neutral-800 shadow-inner bg-opacity-40 rounded-md'>
             <div className='flex justify-center flex-wrap gap-6'>
             {Photos.map((item, i) =>
-            <div key={`photo-${i + 1}`} className='h-80 w-auto'>
+            <div key={`photo-${i + 1}`} className='shrink w-auto'>
               <Image
                 src={item}
                 alt={`Photo ${i + 1}`}
-                className='h-80 w-auto'
+                className='lg:h-80 h-auto w-full'
                 priority
               />
             </div>

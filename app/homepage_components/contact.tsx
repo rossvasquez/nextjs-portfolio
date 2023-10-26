@@ -50,7 +50,7 @@ export default function Contact({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto:
     <p className={`${Roboto1} text-white px-4 md:px-0 text-3xl`}>We would love to hear from you.</p>
     <form className='px-2 pb-8 md:pb-0 md:px-0' onSubmit={(e) => formHandler(e)}>
         <p className={`${Bebas} bg-zinc-800 text-zinc-100 py-3 w-52 pb-2 text-center rounded-tl-[18px] rounded-tr-[18px] text-3xl mt-8`}>Info</p>
-        <div className="bg-neutral-800 bg-opacity-[40%] shadow-inner relative rounded-[4px] rounded-tl-[0px] p-4">
+        <div className="bg-neutral-800 bg-opacity-[40%] shadow-inner relative rounded-[4px] rounded-tl-[0px] p-3 md:p-4 pb-2 md:pb-3">
             <div className="">
                 <p className={`${Roboto1} mb-1 text-white drop-shadow-sm text-lg md:text-xl pl-2`}>Full Name</p>
                 <input onChange={(e) => updateFormData(e, 'name')} value={FormData.name} required type='text' placeholder='John Smith' className={`${Roboto} focus:shadow-inner pl-3 text-2xl md:text-3xl text-zinc-800 bg-zinc-100 w-full md:w-[30rem] focus:outline-none h-16 rounded-[4px]`} />
@@ -61,16 +61,16 @@ export default function Contact({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto:
             </div>
         </div>
         <p className={`${Bebas} bg-zinc-800 text-zinc-100 py-3 w-52 pb-2 text-center rounded-tl-[18px] rounded-tr-[18px] text-3xl mt-8`}>Purpose</p>
-        <div className="bg-neutral-800 bg-opacity-[40%] shadow-inner relative rounded-[4px] rounded-tl-[0px] p-4">
+        <div className="bg-neutral-800 bg-opacity-[40%] shadow-inner relative rounded-[4px] rounded-tl-[0px] p-3 md:p-4">
             <div className="flex flex-wrap gap-4 md:gap-6">
-                <div onClick={() => setPurposeState(1)} className={`${PurposeState === 1 ? 'bg-gradient-to-br from-blue-500 to-cyan-500 shadow-md' : 'bg-sky-300 shadow-inner bg-opacity-10 hover:bg-opacity-[15%]'} transition-[color] px-8 md:px-14 h-16 md:h-20 rounded-[70px] border-zinc-800 hover:cursor-pointer text-zinc-100 flex justify-center items-center text-2xl md:text-3xl ${Roboto}`}>Feedback</div>
-                <div onClick={() => setPurposeState(2)} className={`${PurposeState === 2 ? 'bg-gradient-to-br from-blue-500 to-cyan-500 shadow-md' : 'bg-sky-300 shadow-inner bg-opacity-10 hover:bg-opacity-[15%]'} transition-[color] px-8 md:px-14 h-16 md:h-20 rounded-[70px] border-zinc-800 hover:cursor-pointer text-zinc-100 flex justify-center items-center text-2xl md:text-3xl ${Roboto}`}>Opportunity</div>
-                <div onClick={() => setPurposeState(3)} className={`${PurposeState === 3 ? 'bg-gradient-to-br from-blue-500 to-cyan-500 shadow-md' : 'bg-sky-300 shadow-inner bg-opacity-10 hover:bg-opacity-[15%]'} transition-[color] px-8 md:px-14 h-16 md:h-20 rounded-[70px] border-zinc-800 hover:cursor-pointer text-zinc-100 flex justify-center items-center text-2xl md:text-3xl ${Roboto}`}>Networking</div>
-                <div onClick={() => setPurposeState(4)} className={`${PurposeState === 4 ? 'bg-gradient-to-br from-blue-500 to-cyan-500 shadow-md' : 'bg-sky-300 shadow-inner bg-opacity-10 hover:bg-opacity-[15%]'} transition-[color] px-8 md:px-14 h-16 md:h-20 rounded-[70px] border-zinc-800 hover:cursor-pointer text-zinc-100 flex justify-center items-center text-2xl md:text-3xl ${Roboto}`}>Other</div>
+                <div onClick={() => setPurposeState(1)} className={`${PurposeState === 1 ? 'bg-gradient-to-br from-blue-500 to-cyan-500 shadow-md' : 'bg-sky-300 shadow-inner bg-opacity-10 hover:bg-opacity-[15%]'} transition-[color] px-0 grow md:w-auto md:px-14 h-16 md:h-20 rounded-[70px] border-zinc-800 hover:cursor-pointer text-zinc-100 flex justify-center items-center text-2xl md:text-3xl ${Roboto}`}>Feedback</div>
+                <div onClick={() => setPurposeState(2)} className={`${PurposeState === 2 ? 'bg-gradient-to-br from-blue-500 to-cyan-500 shadow-md' : 'bg-sky-300 shadow-inner bg-opacity-10 hover:bg-opacity-[15%]'} transition-[color] px-0 grow md:w-auto md:px-14 h-16 md:h-20 rounded-[70px] border-zinc-800 hover:cursor-pointer text-zinc-100 flex justify-center items-center text-2xl md:text-3xl ${Roboto}`}>Opportunity</div>
+                <div onClick={() => setPurposeState(3)} className={`${PurposeState === 3 ? 'bg-gradient-to-br from-blue-500 to-cyan-500 shadow-md' : 'bg-sky-300 shadow-inner bg-opacity-10 hover:bg-opacity-[15%]'} transition-[color] px-0 grow md:w-auto md:px-14 h-16 md:h-20 rounded-[70px] border-zinc-800 hover:cursor-pointer text-zinc-100 flex justify-center items-center text-2xl md:text-3xl ${Roboto}`}>Networking</div>
+                <div onClick={() => setPurposeState(4)} className={`${PurposeState === 4 ? 'bg-gradient-to-br from-blue-500 to-cyan-500 shadow-md' : 'bg-sky-300 shadow-inner bg-opacity-10 hover:bg-opacity-[15%]'} transition-[color] px-0 grow md:w-auto md:px-14 h-16 md:h-20 rounded-[70px] border-zinc-800 hover:cursor-pointer text-zinc-100 flex justify-center items-center text-2xl md:text-3xl ${Roboto}`}>Other</div>
             </div>
         </div>
         <p className={`${Bebas} bg-zinc-800 text-zinc-100 py-3 w-52 pb-2 text-center rounded-tl-[18px] rounded-tr-[18px] text-3xl mt-8`}>Message</p>
-        <div className="bg-neutral-800 bg-opacity-[40%] shadow-inner relative rounded-[4px] rounded-tl-[0px] p-4">
+        <div className="bg-neutral-800 bg-opacity-[40%] shadow-inner relative rounded-[4px] rounded-tl-[0px] p-3 md:p-4 pb-2 md:pb-3">
             <div className="">
                 <textarea onChange={(e) => updateFormData(e, 'message')} value={FormData.message} required placeholder='Your portfolio site is sick!' className={`h-60 w-full resize-none focus:outline-none rounded-[4px] focus:shadow-inner p-5 text-2xl md:text-3xl text-zinc-800 bg-zinc-100 ${Roboto}`} />
             </div>

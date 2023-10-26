@@ -33,11 +33,11 @@ export default function About({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto: s
             <div className='flex flex-col md:flex-row-reverse bg-neutral-800 bg-opacity-60 shadow-inner overflow-hidden rounded-md w-full justify-center items-center'>
                 <div className='w-full md:w-1/2 flex justify-center md:justify-normal md:pl-8 items-center'>
                     <div className='h-full flex justify-center items-end w-full'>
-                        <div className='shadow-md bg-zinc-300 bg-opacity-40 mt-6 w-[18rem] md:w-[30rem] h-[18rem] md:h-[30rem] overflow-hidden rounded-[100%]'>
+                        <div className='shadow-md md:shadow-none bg-zinc-300 md:bg-transparent bg-opacity-40 mt-6 w-[18rem] md:w-[30rem] h-[18rem] md:h-[30rem] overflow-hidden rounded-[100%] md:rounded-[0%]'>
                         <Image
                             src={me}
                             alt='Picture of Ross Vasquez'
-                            className='w-full md:w-[30rem] h-auto md:translate-y-12 drop-shadow-md'
+                            className='w-full md:w-[30rem] h-auto translate-y-0  md:translate-y-8 xl:translate-y-4 drop-shadow-md'
                             priority
                         />
                         </div>
