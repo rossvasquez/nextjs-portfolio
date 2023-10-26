@@ -61,7 +61,7 @@ export default function About({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto: s
                         </div>
                     </div>
                     <div className='relative flex justify-center w-full md:w-[30rem] md:h-14 mt-2'>
-                        <a href='/about/CV.pdf' target='_blank' className='w-52 mb-2 md:mb-0 md:absolute flex justify-center bg-gradient-to-br from-blue-500 to-cyan-500 items-center right-0 hover:bg-neutral-800 active:text-neutral-300 hover:bg-opacity-40 text-white hover:text-opacity-80 hover:scale-[103%] transition-all hover:cursor-pointer md:px-14 h-20 rounded-[70px] pb-[2px] shadow-md'>
+                        <a href='/CV.pdf' target='_blank' className='w-52 mb-2 md:mb-0 md:absolute flex justify-center bg-gradient-to-br from-blue-500 to-cyan-500 items-center right-0 hover:bg-neutral-800 active:text-neutral-300 hover:bg-opacity-40 text-white hover:text-opacity-80 hover:scale-[103%] transition-all hover:cursor-pointer md:px-14 h-20 rounded-[70px] pb-[2px] shadow-md'>
                             <p className={`${Roboto1} text-3xl`}>Resume</p>
                         </a>
                     </div>

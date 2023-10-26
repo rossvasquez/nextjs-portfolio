@@ -114,31 +114,47 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2, refer}: {Ro
                             />
                         </div>
                     </div>
-                    <div className={`${Roboto} p-0 md:p-6 w-full bg-zinc-100 min-h-[26.8rem] ${item.with.length < 7 ? 'pb-[3.6em] md:pb-12' : 'pb-28 md:pb-12'} relative h-auto mx-auto text-2xl leading-loose`}>
-                        <div className={`${id === 0 || isEven(id) ? 'md:float-left md:pr-6' : 'md:float-right md:pl-6'}`}>
-                            <div className='relative group object-cover w-auto md:w-[30rem] h-auto md:h-[20rem] md:rounded-md overflow-hidden shadow-md bg-slate-300'>
-                                <Image
-                                    src={item.image}
-                                    alt={`${item.name} Site Logo`}
-                                    className={`relative z-10 h-full object-cover`}
-                                    priority
-                                />
-                                <div className='absolute z-20 top-0 flex justify-center items-center w-full h-full bg-zinc-800 bg-opacity-0 opacity-0 group-hover:bg-opacity-[60%] group-hover:opacity-100'>
-                                    <a href={item.link} target='_blank' className={`py-6 px-12 flex justify-center bg-zinc-800 bg-opacity-80 hover:bg-opacity-100 hover:scale-[103%] hover:bg-cyan-500 transition-all border-opacity-60 border-white shadow-inner hover:cursor-pointer hover:shadow-md rounded-full text-3xl text-white items-center active:bg-opacity-60 ${Roboto}`}>
-                                        Visit Site
-                                    </a>
+                    <div className={`${Roboto} w-full bg-zinc-100 min-h-[26.8rem] relative h-auto mx-auto text-2xl leading-loose`}>
+                        <div className='p-0 md:p-6'>
+                            <div className='md:min-h-[20rem]'>
+                                <div className={`${id === 0 || isEven(id) ? 'md:float-left md:pr-6' : 'md:float-right md:pl-6'}`}>
+                                    <div className='relative group object-cover w-auto md:w-[30rem] h-auto md:h-[20rem] md:rounded-md overflow-hidden shadow-md bg-slate-300'>
+                                        <Image
+                                            src={item.image}
+                                            alt={`${item.name} Site Logo`}
+                                            className={`relative z-10 h-full object-cover`}
+                                            priority
+                                        />
+                                        <div className='absolute z-20 top-0 flex justify-center items-center w-full h-full bg-zinc-800 bg-opacity-0 opacity-0 group-hover:bg-opacity-[60%] group-hover:opacity-100'>
+                                            <a href={item.link} target='_blank' className={`py-6 px-12 flex justify-center bg-zinc-800 bg-opacity-80 hover:bg-opacity-100 hover:scale-[103%] hover:bg-gradient-to-tr hover:from-cyan-500 hover:to-blue-500 transition-all border-opacity-60 border-white shadow-inner hover:cursor-pointer hover:shadow-md rounded-full text-3xl text-white items-center active:bg-opacity-60 ${Roboto}`}>
+                                                Visit Site
+                                            </a>
+                                        </div>
+                                        <p className={`left-[50%] translate-x-[-50%] absolute group-hover:opacity-0 bottom-4 z-30 text-white px-4 rounded-full bg-zinc-800 bg-opacity-60 ${Roboto}`}>Hover</p>
+                                    </div>
                                 </div>
-                                <p className={`left-[50%] translate-x-[-50%] absolute group-hover:opacity-0 bottom-4 z-30 text-white px-4 rounded-full bg-zinc-800 bg-opacity-60 ${Roboto}`}>Hover</p>
+                                <p className={`p-4 md:p-0 text-xl md:text-2xl leading-[2.7rem] md:leading-[3rem] text-zinc-800`}>{item.description1}</p>
                             </div>
                         </div>
-                        <p className={`-mt-2 p-4 md:p-0 text-xl md:text-2xl leading-[2.7rem] md:leading-[3rem] text-zinc-800`}>{item.description1}</p>
-                        <div className={` ${item.description2 == '' ? 'hidden' : null } w-full h-[.1rem] bg-zinc-400 bg-opacity-60 -my-1 md:my-1`} />
-                        <p className={`-mt-[.1rem] p-4 md:mb-6 md:p-0 text-xl md:text-2xl leading-[2.7rem] md:leading-[3rem] text-zinc-800 ${Roboto}`}>{item.description2}</p>
-                        <div className={`w-full bg-zinc-800 h-auto absolute bottom-0 left-0 px-4 md:px-6`}>
-                            <div className={`${id === 0 || isEven(id) ? ' justify-end' : ' justify-start'} w-full flex flex-wrap py-4 w-auto`}>
-                                <p className={`${Roboto2} text-lg text-zinc-300`}>Built with&nbsp;</p>
+                        <div className={`w-full bg-gradient-to-bl ${ProjIndex === (id+1) ? 'from-cyan-500' : 'from-teal-200 hover:from-blue-500 hover:to-teal-200'} to-blue-500 p-4 flex flex-col md:items-center`}>
+                                {item.name == 'Functioning Mockup' ? 
+                                <a href='/PSD-Mockup.jpg' target='_blank' className={`drop-shadow-md md:text-center w-full text-xl md:text-3xl leading-[2.7rem] md:leading-[3rem] text-[#ffffff] ${Roboto}`}>Click here to view the mockup, then check out the responsive site.</a>
+                                :
+                                <p className={`drop-shadow-md md:text-center w-full text-xl md:text-3xl leading-[2.7rem] md:leading-[3rem] text-[#ffffff] ${Roboto}`}>{item.description2}</p>
+                                }
+                                {item.description3.length === 0 ? null :
+                                    <div className='w-full flex flex-wrap md:justify-center -ml-4 md:-ml-0 mt-4 mb-2'>
+                                        {item.description3.map((credential, id) =>
+                                            <p key={id} className={`select-text ${id === 1 ? 'min-[1078px]:border-x-[.1rem] min-[672px]:border-l-[.1rem]' : null} px-4 text-lg md:text-xl leading-[2.7rem] md:leading-[2.4rem] text-neutral-50 text-[#ffffff] ${Roboto2}`}>{credential}</p>
+                                            )}
+                                    </div>
+                                }
+                        </div>
+                        <div className={`w-full bg-zinc-800 h-auto bottom-0 left-0 px-4 md:px-6`}>
+                            <div className={`${id === 0 || isEven(id) ? 'justify-center' : ' justify-center'} w-full flex flex-wrap py-4 w-auto`}>
+                                <p className={`${Roboto2} text-lg md:text-xl text-zinc-300`}>Built with&nbsp;</p>
                                 {item.with.map((tool, id) =>
-                                    <p className={`${Roboto} text-lg text-zinc-300`} key={id}><span className=''>{tool}</span>{(id+1) === item.with.length ? '' : `,`}{(id+2) === item.with.length ? ' and' : null}&nbsp;</p>
+                                    <p className={`${Roboto} text-lg md:text-xl text-zinc-300`} key={id}><span className=''>{tool}</span>{(id+1) === item.with.length ? '' : `,`}{(id+2) === item.with.length ? ' and' : null}&nbsp;</p>
                                 )}
                             </div>
                         </div>
