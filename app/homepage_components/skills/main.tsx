@@ -86,6 +86,7 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
                     src={arrow}
                     alt='Menu Arrow Backwards'
                     className='rotate-[180deg] h-6 w-6 opacity-[80%] mr-1'
+                    priority
                 />
             </div>
             <div onClick={() => skillsController(true)} className={`${SkillsIndex === 2 ? 'opacity-50 hover:cursor-not-allowed' : 'opacity-100 shadow-inner hover:shadow-sm hover:cursor-pointer hover:bg-opacity-[30%]' } transition-all absolute left-[calc(5rem+1%)] -bottom-10 md:bottom-auto md:left-[98%] md:translate-x-[-100%] z-20 bg-opacity-[15%] flex justify-center items-center bg-neutral-100 active:bg-cyan-200 rounded-[100%] h-14 w-14`}>
@@ -93,6 +94,7 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
                     src={arrow}
                     alt='Menu Arrow Backwards'
                     className='h-6 w-6 opacity-[80%] ml-1'
+                    priority
                 />
             </div>
         </div>
