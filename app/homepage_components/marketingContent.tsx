@@ -26,7 +26,7 @@ import mcloud from '../../public/mcloud.png'
 import mailchimp from '../../public/em/mailchimp.jpg'
 import emailjs from '../../public/em/emailjs.png'
 
-import { sendEmailController } from './emailController'
+import { sendEmailController } from '../api/emailjs/emailController'
 
 import { useState } from 'react'
 
@@ -206,7 +206,7 @@ export default function Marketing({Roboto, Bebas, Roboto1, Roboto2, refer}: {Rob
                 alt="Salesforce Marketing Cloud"
                 className='px-6 pb-6 md:p-0 md:w-60 w-full h-auto md:float-right md:mr-10'
             />
-            <p className={`text-white text-2xl md:text-3xl ${Roboto1} text-center md:text-left leading-[3rem] md:leading-[4rem]`}>Utilizing CRM records to automate marketing as well as collecting data for storage in a CRM is an important aspect of a well oiled business. Utilizing Salesforce Marketing Cloud to create workflows can be a great way to solve this. VisualForce pages are also another common use case to collect data. I learned about these concepts while studying for my certification exam through hands on learning modules in Trailhead. With an extensive array of third-party integrations on AppExchange and the ability to communicate with data directly via API, the sky is the limit. Whether you&#39;re using Salesforce or another CRM/CMS, marketing automation is something I feel confident in working with.</p>
+            <p className={`text-white text-2xl md:text-3xl ${Roboto1} text-center md:text-left leading-[3rem] md:leading-[4rem]`}>Utilizing CRM records to automate marketing as well as collecting data for storage in a CRM is an important aspect of a well oiled business. Utilizing Salesforce Marketing Cloud to create workflows can be a great way to solve this. VisualForce pages are also another common use case to collect data. I learned about these concepts while studying for my certification exam through hands on learning modules in Trailhead. With an extensive array of third-party integrations on AppExchange and the ability to communicate with data directly via API, the sky is the limit. Whether you&#39;re using Salesforce or another CRM/CMS, marketing automation is something I feel confident working with.</p>
         </div>
     </div>
 

@@ -28,9 +28,9 @@ export default function About({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto: s
     ])
 
     return(
-        <div className='w-full max-w-7xl md:p-2 mt-28 md:mb-8 pb-8 md:pb-2'>
-          <div className='w-full h-auto md:p-0 p-2'>
-            <div className='flex flex-col md:flex-row-reverse bg-neutral-800 bg-opacity-60 shadow-inner overflow-hidden rounded-md w-full justify-center items-center'>
+        <div className='w-full max-w-7xl p-2 md:p-4 mt-28 md:mb-8 bg-neutral-800 bg-opacity-30 rounded-t-lg md:rounded-md'>
+          <div className='w-full h-auto md:p-0'>
+            <div className='flex flex-col md:flex-row-reverse bg-neutral-800 bg-opacity-40 shadow-inner overflow-hidden rounded-md w-full justify-center items-center'>
                 <div className='w-full md:w-1/2 flex justify-center md:justify-normal md:pl-8 items-center'>
                     <div className='h-full flex justify-center items-end w-full'>
                         <div className='shadow-md md:shadow-none bg-zinc-300 md:bg-transparent bg-opacity-40 mt-6 w-[18rem] md:w-[30rem] h-[18rem] md:h-[30rem] overflow-hidden rounded-[100%] md:rounded-[0%]'>
@@ -65,13 +65,12 @@ export default function About({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto: s
                             <p className={`${Roboto1} text-3xl`}>Resume</p>
                         </a>
                     </div>
-                    {/* <p className={`w-[30rem] text-right text-5xl mt-20 ${Bebas}`}>24 Years Old</p> */}
                 </div>
             </div>
-            <div className={'bg-neutral-800 p-6 bg-opacity-[60%] shadow-inner rounded-md w-full h-auto mt-2 md:mt-6'}>
-                <p className={`text-white text-2xl md:text-3xl ${Roboto1} text-left leading-[3rem] md:leading-[4rem]`}>I am a tech enthusiast from the Des Moines area. I enjoy leveraging my diverse skillset of web development, data transformation, and marketing to create original solutions. I am seeking a full-time position where I can be multi-faceted in providing value for an organization. My ideal position will allow me to grow my knowledge of what it means to architecht and implement through multiple mediums. I want to be challenged. To me, the best part of the development proccess in anything I do, is the feeling of solving a problem. It means I have gained something for future application.
+            <div className={'bg-neutral-800 p-6 bg-opacity-[40%] shadow-inner rounded-md w-full h-auto mt-2 md:mt-4'}>
+                <p className={`text-white text-2xl md:text-3xl ${Roboto1} text-left leading-[3rem] md:leading-[4rem]`}>I am a tech enthusiast from the Des Moines area with a diverse skillset in web development, data transformation, and marketing. I am passionate about leveraging these skills to create original solutions. Currently, I am seeking a full-time position where I can be multifaceted in providing value to an organization. My ideal role would offer opportunities to expand my knowledge in architecting and implementing solutions across various mediums. I thrive on challenges; to me, the most rewarding aspect of any development process is the sense of accomplishment that comes from solving a problem, as it signifies gaining valuable insights for future endeavors.
                 <br/><br/>
-                Outside of technology, I am an avid golfer and pick-up basketball player. I used to be better, then I started coding, oh well. I enjoy life with my wonderful girlfriend who is my biggest supporter.
+                Outside of technology, I am an avid golfer and pick-up basketball player. Admittedly, I used to be better at these sports before I started coding, but oh well. Life is also enriched by the company of my wonderful girlfriend, who is my biggest supporter.
                 </p>
             </div>
           </div>

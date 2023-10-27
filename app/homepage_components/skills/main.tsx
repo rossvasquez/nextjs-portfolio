@@ -69,7 +69,7 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
     }
 
     const ScrollDown = () =>
-    <div onClick={() => scrollToIt()} className={`absolute bottom-2 md:relative z-30 w-[calc(100%-1rem)] md:w-80 h-1/3 md:h-20 mx-auto bg-opacity-[15%] shadow-md bg-neutral-100 mt-40 rounded-[6px] ${Bebas} flex justify-center transition-all items-center text-5xl text-sky-200 pt-1 hover:text-neutral-100 hover:cursor-pointer active:bg-opacity-[30%]`}>
+    <div onClick={() => scrollToIt()} className={`absolute bottom-24 md:relative z-30 w-[calc(100%-2rem)] ml-[.5rem] md:w-80 h-20 md:h-20 md:mx-auto bg-opacity-[15%] shadow-md bg-neutral-100 mt-40 rounded-[6px] ${Bebas} flex justify-center transition-all items-center text-5xl text-sky-200 pt-1 hover:text-neutral-100 hover:cursor-pointer active:bg-opacity-[30%]`}>
         {getBtnLabel()}
     </div>
 
@@ -81,18 +81,18 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
             <div className={`text-zinc-800 pt-3 md:pt-28 lg:pt-5 px-6 md:px-20 text-left md:text-center w-[100vw] -mt-12 md:mt-0 leading-[5rem] text-[3rem] md:text-[7rem] md:leading-[5.5rem] flex h-auto drop-shadow-md justify-start md:justify-center items-start md:items-center ${playball.className}`}>Digital Marketer</div>
         </div>
         <div className='max-w-7xl h-20 w-screen relative flex items-center'>
-            <div onClick={() => skillsController(false)} className={`${SkillsIndex === 0 ? 'opacity-50 hover:cursor-not-allowed' : 'opacity-100 shadow-inner hover:shadow-sm hover:cursor-pointer hover:bg-opacity-[30%]' } transition-all absolute left-[3.8%] -bottom-20 md:bottom-auto md:left-[2%] z-20 bg-opacity-[15%] flex justify-center items-center bg-neutral-100 active:bg-cyan-200 rounded-[100%] h-16 w-16`}>
+            <div onClick={() => skillsController(false)} className={`${SkillsIndex === 0 ? 'opacity-50 hover:cursor-not-allowed' : 'opacity-100 shadow-inner hover:shadow-sm hover:cursor-pointer hover:bg-opacity-[30%]' } transition-all absolute left-[3.8%] -bottom-10 md:bottom-auto md:left-[2%] z-20 bg-opacity-[15%] flex justify-center items-center bg-neutral-100 active:bg-cyan-200 rounded-[100%] h-14 w-14`}>
                 <Image
                     src={arrow}
                     alt='Menu Arrow Backwards'
-                    className='rotate-[180deg] h-7 w-7 opacity-[80%] mr-1'
+                    className='rotate-[180deg] h-6 w-6 opacity-[80%] mr-1'
                 />
             </div>
-            <div onClick={() => skillsController(true)} className={`${SkillsIndex === 2 ? 'opacity-50 hover:cursor-not-allowed' : 'opacity-100 shadow-inner hover:shadow-sm hover:cursor-pointer hover:bg-opacity-[30%]' } transition-all absolute left-[calc(5.6rem+1%)] -bottom-20 md:bottom-auto md:left-[98%] md:translate-x-[-100%] z-20 bg-opacity-[15%] flex justify-center items-center bg-neutral-100 active:bg-cyan-200 rounded-[100%] h-16 w-16`}>
+            <div onClick={() => skillsController(true)} className={`${SkillsIndex === 2 ? 'opacity-50 hover:cursor-not-allowed' : 'opacity-100 shadow-inner hover:shadow-sm hover:cursor-pointer hover:bg-opacity-[30%]' } transition-all absolute left-[calc(5rem+1%)] -bottom-10 md:bottom-auto md:left-[98%] md:translate-x-[-100%] z-20 bg-opacity-[15%] flex justify-center items-center bg-neutral-100 active:bg-cyan-200 rounded-[100%] h-14 w-14`}>
                 <Image
                     src={arrow}
                     alt='Menu Arrow Backwards'
-                    className='h-7 w-7 opacity-[80%] ml-1'
+                    className='h-6 w-6 opacity-[80%] ml-1'
                 />
             </div>
         </div>

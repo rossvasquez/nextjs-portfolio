@@ -4,6 +4,8 @@ import { useState } from 'react'
 
 import { addContactData } from '../api/supabase/addContactData'
 
+import { sendFormEmailController } from '../api/emailjs/formEmail'
+
 export default function Contact({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto: string, Roboto1: string}) {
 
     const [FormSubmitted, setFormSubmitted] = useState(false)
@@ -36,6 +38,7 @@ export default function Contact({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto:
         } else if (PurposeState === 4) {
             tempObj.purpose = 'Other'
         }
+        await sendFormEmailController(tempObj)
         const db = await addContactData(tempObj)
         if (db.test) {
             setFormSubmitted(true)
@@ -47,7 +50,7 @@ export default function Contact({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto:
     const formBlock = () =>
     <>
     <p className={`${Bebas} text-white px-4 pt-8 md:px-0 md:pt-0 text-6xl`}>Reach Out!</p>
-    <p className={`${Roboto1} text-white px-4 md:px-0 text-3xl`}>We would love to hear from you.</p>
+    <p className={`${Roboto1} text-white px-4 md:px-0 text-3xl`}>I would love to hear from you.</p>
     <form className='px-2 pb-8 md:pb-0 md:px-0' onSubmit={(e) => formHandler(e)}>
         <p className={`${Bebas} bg-zinc-800 text-zinc-100 py-3 w-52 pb-2 text-center rounded-tl-[18px] rounded-tr-[18px] text-3xl mt-8`}>Info</p>
         <div className="bg-neutral-800 bg-opacity-[40%] shadow-inner relative rounded-[4px] rounded-tl-[0px] p-3 md:p-4 pb-2 md:pb-3">
@@ -89,7 +92,7 @@ export default function Contact({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto:
 
     return(
         <div className='w-full max-w-7xl md:p-2 mt-28 md:mb-8'>
-            <div className='w-full h-auto md:p-6 bg-neutral-800 bg-opacity-[30%] md:rounded-md shadow-md'>
+            <div className='w-full h-auto md:p-6 bg-neutral-800 bg-opacity-[30%] rounded-t-lg md:rounded-md shadow-md'>
                 <div className='md:p-6 rounded-md w-full h-auto'>
                     {FormSubmitted ? <Thanks /> : formBlock()}
                 </div>

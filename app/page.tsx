@@ -56,7 +56,7 @@ export default function Home() {
   const marketingRef = useRef<HTMLDivElement>(null)
   
   return (
-    <main className='select-none'>
+    <main className='select-text'>
       <div className={`relative flex flex-col justify-center items-center bg-gradient-to-br min-h-[100vh] from-cyan-500 via-blue-500 to-teal-200 w-screen ${Page === 1 ? 'h-screen' : 'h-auto'}`}>
         <div className='z-10 flex justify-center md:justify-none items-center absolute top-0 w-screen h-20'>
           <div className={`relative flex justify-center items-center w-auto py-3 mt-7 px-8 bg-neutral-100 bg-opacity-[15%] rounded-full shadow-md gap-8 md:gap-12 ${playfair.className}`}>
