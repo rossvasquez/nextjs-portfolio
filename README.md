@@ -1,4 +1,4 @@
-# ![](https://www.iconsdb.com/icons/download/black/user-3-24.png) <a href="https://rossvasquez.me" target="_blank" style="color: #ffffff;">Portfolio</a>
+# ![](https://www.iconsdb.com/icons/download/black/user-3-24.png) [Portfolio](https://rossvasquez.me)
 
 Created with:
 
