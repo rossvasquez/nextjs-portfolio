@@ -69,7 +69,7 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
     }
 
     const ScrollDown = () =>
-    <div onClick={() => scrollToIt()} className={`absolute bottom-24 md:relative z-30 w-[calc(100%-2rem)] ml-[.5rem] md:w-80 h-20 md:h-20 md:mx-auto bg-opacity-[15%] shadow-md bg-neutral-100 mt-40 rounded-[6px] ${Bebas} flex justify-center transition-all items-center text-5xl text-sky-200 pt-1 hover:text-neutral-100 hover:cursor-pointer active:bg-opacity-[30%]`}>
+    <div onClick={() => scrollToIt()} className={`relative z-30 w-[16rem] ml-[.5rem] md:w-80 h-16 md:h-20 md:mx-auto bg-opacity-[15%] shadow-inner md:shadow-md bg-neutral-100 mt-20 md:mt-40 rounded-[6px] ${Bebas} flex justify-center transition-all items-center text-4xl md:text-5xl text-sky-200 pt-1 hover:text-neutral-100 hover:cursor-pointer active:bg-opacity-[30%]`}>
         {getBtnLabel()}
     </div>
 
