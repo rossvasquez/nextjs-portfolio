@@ -1,4 +1,4 @@
-# [`My Portfolio`](https://rossvasquez.me)
+# [Portfolio](https://rossvasquez.me) ![](https://www.iconsdb.com/icons/download/black/user-3-48.png)
 
 Created with:
 
