@@ -1,6 +1,18 @@
 import './globals.css'
+import type { Metadata } from 'next'
 
-import Head from 'next/head'
+export const metadata: Metadata = {
+  title: 'Ross Vasquez',
+  description: 'A portfolio of technological literacy.',
+  openGraph: {
+    type: "website",
+    url: "https://rossvasquez.me",
+    title: "Ross' Portfolio",
+    description: "A collection of work.",
+    siteName: "Ross' Portfolio",
+    images: [{url: "https://evoumvdxqcveaclexrxv.supabase.co/storage/v1/object/public/Images/this_site.png",}]
+  }
+}
 
 export default function RootLayout({
   children,
@@ -9,20 +21,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <title>Ross Vasquez Portfolio</title>
-        <meta name="description" content="A collection of work." key="desc" />
-        <meta property="og:title" content="Ross' Portfolio" />
-        <meta
-          property="og:description"
-          content="A collection of work."
-        />
-        <meta
-          property="og:image"
-          content="https://evoumvdxqcveaclexrxv.supabase.co/storage/v1/object/public/Images/this_site.png"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
       <body>{children}</body>
     </html>
   )
