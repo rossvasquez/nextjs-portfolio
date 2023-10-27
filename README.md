@@ -1,4 +1,4 @@
-# ![](https://www.iconsdb.com/icons/download/black/user-3-24.png) [Portfolio](https://rossvasquez.me)
+# ![](https://www.iconsdb.com/icons/download/white/user-3-24.png) [Portfolio](https://rossvasquez.me)
 
 Created with:
 
