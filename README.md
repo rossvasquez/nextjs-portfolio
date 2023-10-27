@@ -2,11 +2,11 @@
 
 Created with:
 
--TypeScript
--React
--Next
--TailwindCSS
--Supabase(Contact Form Storage)
+-TypeScript<br/>
+-React<br/>
+-Next<br/>
+-TailwindCSS<br/>
+-Supabase(Contact Form Storage)<br/>
 -Email Automation (EmailJS)
 
 # About
