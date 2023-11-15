@@ -7,7 +7,6 @@ import { webIntro } from './webContentIntro'
 import { projectInfo } from './projectContent'
 
 import Image from 'next/image'
-import Link from 'next/link'
 
 import arrow from '../../../public/arrow.png'
 
@@ -53,7 +52,6 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2, refer}: {Ro
                         <div className='w-full'>
                             <div className='flex w-3/4'>
                                 <p className={`${Bebas} pl-6 md:pl-14 mt-[2px] text-4xl text-white transition-all duration-300 ease-in-out`}>{item.name}</p>
-                                {/* <p className={`text-3xl ${ProjIndex === (id+1) ? `translate-x-[16px]` : `translate-x-[6px]`} duration-300 transition-all`}>{item.emoji}</p> */}
                             </div>
                             <p className={`${Roboto} ${ProjIndex === (id+1) ? `text-neutral-100` : `text-neutral-300 scale-[100%] mb-4`} w-auto pl-6 md:pl-14 text-lg transition-all duration-300 ease-in-out`}>{item.tagline}</p>
                         </div>

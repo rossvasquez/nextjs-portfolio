@@ -116,6 +116,10 @@ export const webIntro = [
             "name": "Photoshop",
             "image": photoshopLogo
         },
+        {
+            "name": "Midjourney",
+            "image": midjourneyLogo
+        },
     ],
     [
         {
@@ -141,10 +145,6 @@ export const webIntro = [
         {
             "name": "OpenAI",
             "image": openaiLogo
-        },
-        {
-            "name": "Midjourney",
-            "image": midjourneyLogo
         },
     ],
     [
