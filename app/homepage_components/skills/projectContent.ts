@@ -6,6 +6,9 @@ import zmariks from '../../../public/websites/zmariks.png'
 import cateringOrderSystem from '../../../public/websites/cateringOrderSystem.png'
 import psd from '../../../public/websites/psd.png'
 import reactpress from '../../../public/websites/reactpress.png'
+import portfolio_v1 from '../../../public/websites/portfolio_v1.png'
+import portfolio_v2 from '../../../public/websites/portfolio_v2.png'
+import reminder_app from '../../../public/websites/reminder_app.png'
 
 export const projectInfo = [
     {
@@ -16,8 +19,7 @@ export const projectInfo = [
         "description3": [],
         "with": ['Typescript', 'JavaScript', 'React', 'NextJS', 'TailwindCSS', 'Supabase', 'AWS Lambda', 'Netlify', 'OpenAI API', 'Midjourney', 'Photoshop', 'Lottie'],
         "image": tiden,
-        "link": 'https://tiden-ai.netlify.app',
-        "emoji":'💪'
+        "link": 'https://tiden-ai.netlify.app'
     },
     {
         "name": 'State Fairdle',
@@ -28,7 +30,16 @@ export const projectInfo = [
         "with": ['JavaScript', 'React', 'Vite', 'TailwindCSS', 'Supabase', 'Netlify', 'Serverless Functions', 'Dictionary API', 'Midjourney', 'Photoshop'],
         "image": mockUpIPHONE,
         "link": 'https://statefairdle.com',
-        "emoji":'👨🏻‍🌾'
+    },
+    {
+        "name": 'Reminder App',
+        "tagline": "YouTube Series",
+        "description1": "Supabase has been an integral part of my advancement. It provides abstractions for Postgres, Auth, Storage, and more that allow you to get your hands dirty without being overwhelmed when transitioning from frontend to full stack. Since this tool helped me so much, I wanted to share the love so I built out what I believe is an extremely simple and readable full stack reminder app that I am currently recording a YouTube series for in order to help others learn.",
+        "description2": 'Create an account and track some reminders!',
+        "description3": [],
+        "with": ['JavaScript', 'React', 'React Router', 'Vite', 'TailwindCSS', 'Supabase', 'Netlify'],
+        "image": reminder_app,
+        "link": 'https://quezyoutube.netlify.app/',
     },
     {
         "name": 'Cocktail Finder',
@@ -38,8 +49,7 @@ export const projectInfo = [
         "description3": [],
         "with": ['JavaScript', 'React', 'Vite', 'TailwindCSS', 'WordPress', 'ReactPress', 'Cloudflare', 'Flywheel', 'LocalWP', 'Cocktail Recipe API'],
         "image": reactpress,
-        "link": 'https://reactpressdemo.flywheelsites.com/cocktail-finder/',
-        "emoji":'🍸'
+        "link": 'https://reactpressdemo.flywheelsites.com/cocktail-finder/'
     },
     {
         "name": 'Catering Order System',
@@ -49,8 +59,7 @@ export const projectInfo = [
         "description3": [],
         "with": ['HTML', 'CSS', 'JavaScript', 'Gulp', 'Firebase', 'Mapquest API'],
         "image": cateringOrderSystem,
-        "link": 'https://catering-order-system-2ae86.web.app/',
-        "emoji":'🍝'
+        "link": 'https://catering-order-system-2ae86.web.app/'
     },
     {
         "name": 'Restaurant Site Redesign',
@@ -60,8 +69,7 @@ export const projectInfo = [
         "description3": [],
         "with": ['React', 'Vite', 'TailwindCSS', 'Netlify', 'Google Maps API', 'Midjourney', 'Photoshop'],
         "image": zmariks,
-        "link": 'https://zmariksredesign.netlify.app/',
-        "emoji":'🍝'
+        "link": 'https://zmariksredesign.netlify.app/'
     },
     {
         "name": 'Functioning Mockup',
@@ -71,8 +79,7 @@ export const projectInfo = [
         "description3": [],
         "with": ['Photoshop', 'JavaScript', 'React', 'Vite', 'TailwindCSS', 'Netlify', 'Photoshop'],
         "image": psd,
-        "link": 'https://psdtowebpractice.netlify.app/',
-        "emoji":'🍝'
+        "link": 'https://psdtowebpractice.netlify.app/'
     },
     {
         "name": 'Mobile Wallet',
@@ -84,8 +91,7 @@ export const projectInfo = [
                         'mj23@jumpman.air - Car0linaBlue!'],
         "with": ['JavaScript', 'Vue3', 'Nuxt3', 'TailwindCSS', 'Supabase', 'Netlify', 'Midjourney', 'Photoshop'],
         "image": walletEval,
-        "link": 'https://nuxtwallet.netlify.app/',
-        "emoji":'💵'
+        "link": 'https://nuxtwallet.netlify.app/'
     },
     {
         "name": 'Foundation Site',
@@ -95,7 +101,26 @@ export const projectInfo = [
         "description3": ['Site Password: mhf2023$'],
         "with": ['JavaScript', 'React', 'Vite', 'TailwindCSS', 'Supabase', 'Netlify', 'Serverless Functions', 'Eventbrite API', 'Printful API'],
         "image": foundation,
-        "link": 'https://michaelhenterfoundation.org',
-        "emoji":'🤍'
+        "link": 'https://michaelhenterfoundation.org'
+    },
+    {
+        "name": 'Previous Portfolio',
+        "tagline": "Tailwind Parallax App",
+        "description1": "My previous portfolio that where I built components with Tailwind and utilized Parallax for a cool landing effect.",
+        "description2": 'Visit the site to check out my old vision.',
+        "description3": [],
+        "with": ['JavaScript', 'React', 'Vite', 'TailwindCSS', 'Netlify', 'Parallax'],
+        "image": portfolio_v2,
+        "link": 'https://trvportfolio-v2.netlify.app/'
+    },
+    {
+        "name": 'MUI Portfolio',
+        "tagline": "Create React App + MUI",
+        "description1": "My original portfolio that I built to showcase my early learning in JavaScript. Built using MUI's component library.",
+        "description2": 'Visit the site to check out my original work.',
+        "description3": [],
+        "with": ['JavaScript', 'React', 'MUI', 'CSS', 'Netlify'],
+        "image": portfolio_v1,
+        "link": 'https://trvportfolio-v1.netlify.app/'
     },
 ]
