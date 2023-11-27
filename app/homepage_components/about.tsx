@@ -28,7 +28,7 @@ export default function About({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto: s
     ])
 
     return(
-        <div className='w-full max-w-7xl p-2 md:p-4 mt-28 md:mb-8 bg-neutral-800 bg-opacity-30 rounded-t-lg md:rounded-md'>
+        <div className='w-full max-w-7xl p-2 md:p-4 pt-28 md:pt-0 md:mt-28 md:mb-8 bg-neutral-800 bg-opacity-30 md:rounded-t-lg md:rounded-md'>
           <div className='w-full h-auto md:p-0'>
             <div className='flex flex-col md:flex-row-reverse bg-neutral-800 bg-opacity-40 shadow-inner overflow-hidden rounded-md w-full justify-center items-center'>
                 <div className='w-full md:w-1/2 flex justify-center md:justify-normal md:pl-8 items-center'>

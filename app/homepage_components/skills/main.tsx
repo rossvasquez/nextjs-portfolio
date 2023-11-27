@@ -17,14 +17,13 @@ import arrow from '../../../public/arrow.png'
 import './menu.css'
 
 type MainSkillsProps = {
-    Bebas: string;
-    Roboto: string;
-    SkillsIndex: number;
-    setSkillsIndex: React.Dispatch<React.SetStateAction<number>>;
-    scrollToIt: any;
+    Bebas: string
+    SkillsIndex: number
+    setSkillsIndex: React.Dispatch<React.SetStateAction<number>>
+    scrollToIt: any
 };
 
-export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsIndex, setSkillsIndex, scrollToIt }) => {
+export const MainSkills: React.FC<MainSkillsProps> = ({ Bebas, SkillsIndex, setSkillsIndex, scrollToIt }) => {
 
     const [CurrentTrans, setCurrentTrans] = useState('translate-x-[200vw]')
 
@@ -69,7 +68,7 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
     }
 
     const ScrollDown = () =>
-    <div onClick={() => scrollToIt()} className={`relative z-30 w-[16rem] ml-[.5rem] md:w-80 h-16 md:h-20 md:mx-auto bg-opacity-[15%] shadow-inner md:shadow-md bg-neutral-100 mt-20 md:mt-40 rounded-[6px] ${Bebas} flex justify-center transition-all items-center text-4xl md:text-5xl text-sky-200 pt-1 hover:text-neutral-100 hover:cursor-pointer active:bg-opacity-[30%]`}>
+    <div onClick={() => scrollToIt()} className={`relative z-30 w-[16rem] ml-[.5rem] md:w-80 h-16 md:h-20 md:mx-auto bg-opacity-[15%] shadow-inner md:shadow-md bg-neutral-100 mt-20 md:mt-32 rounded-[6px] ${Bebas} flex justify-center transition-all items-center text-4xl md:text-5xl text-sky-200 pt-1 hover:text-neutral-100 hover:cursor-pointer active:bg-opacity-[30%]`}>
         {getBtnLabel()}
     </div>
 
@@ -104,7 +103,7 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Roboto, Bebas, SkillsInd
 
     return(
         <>
-            <p className={`text-transparent bg-gradient-to-tl from-teal-300 to-sky-200 drop-shadow-lg bg-clip-text ${Bebas} relative z-10 text-[8rem] md:text-[14rem] w-full font-semibold text-left md:text-center px-4 md:px-0 leading-[6.5rem] mt-[14rem] md:mt-[10rem] py-1 md:leading-[11rem]`}>Ross Vasquez</p>
+            <p className={`text-transparent bg-gradient-to-tl from-teal-300 to-sky-200 drop-shadow-lg bg-clip-text ${Bebas} relative z-10 text-[8rem] md:text-[14rem] w-full font-semibold text-left md:text-center px-4 md:px-0 leading-[6.5rem] mt-[14rem] md:mt-[6rem] py-1 md:leading-[11rem]`}>Ross Vasquez</p>
             <div className='relative h-full md:h-auto z-10 w-screen px-2 overflow-hidden -mt-2'>
                 <Menu />
                 <ScrollDown />
