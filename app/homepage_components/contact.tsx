@@ -2,8 +2,6 @@
 
 import { useState } from 'react'
 
-import { addContactData } from '../api/supabase/addContactData'
-
 import { sendFormEmailController } from '../api/emailjs/formEmail'
 
 export default function Contact({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto: string, Roboto1: string}) {
@@ -46,12 +44,6 @@ export default function Contact({Bebas, Roboto, Roboto1}:{Bebas: string, Roboto:
             window.alert('Please select a purpose for communications.')
         } else {
             await sendFormEmailController(tempObj)
-            const db = await addContactData(tempObj)
-            if (db.test) {
-                setFormSubmitted(true)
-            } else {
-                window.alert(db.info)
-            }
         }
     }
 
