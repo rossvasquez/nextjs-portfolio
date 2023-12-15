@@ -14,7 +14,7 @@ export const projectInfo = [
     {
         "name": 'Tiden',
         "tagline": "OpenAI Web App",
-        "description1": "A NextJS MVP that allows users to sign up and get meal/workout plans based on their measurables by way of the OpenAI Completion API. Auth/Database created with Supabase/PostgreSQL. AWS Lambda function processing OpenAI feature.",
+        "description1": "A NextJS MVP that allows users to sign up and get meal plans based on their measurables by way of the OpenAI Completion API. Auth/Database created with Supabase/PostgreSQL. AWS Lambda function processing OpenAI feature.",
         "description2": 'Sign up for Tiden at no cost and get a meal plan generated for you by AI.',
         "description3": [],
         "with": ['Typescript', 'JavaScript', 'React', 'NextJS', 'TailwindCSS', 'Supabase', 'AWS Lambda', 'Netlify', 'OpenAI API', 'Midjourney', 'Photoshop', 'Lottie'],
@@ -80,18 +80,6 @@ export const projectInfo = [
         "with": ['Photoshop', 'JavaScript', 'React', 'Vite', 'TailwindCSS', 'Netlify', 'Photoshop'],
         "image": psd,
         "link": 'https://psdtowebpractice.netlify.app/'
-    },
-    {
-        "name": 'Mobile Wallet',
-        "tagline": "Vue MVP",
-        "description1": "A technical evaluation where I was tasked with creating a Mobile Coupon Wallet MVP over four days. We were asked to use Vue, specifically Nuxt3. I used Supabase as a DB (PostgreSQL) and for Auth. The app has different coupon records based on users.",
-        "description2": "Log in with any of the following credentials to view the wallet animations. You may have to reload the page upon log in.",
-        "description3": ['roger.waters@gmail.com - Pri$m123',
-                        'tiger@gmail.com - Gr33nJ@cket',
-                        'mj23@jumpman.air - Car0linaBlue!'],
-        "with": ['JavaScript', 'Vue3', 'Nuxt3', 'TailwindCSS', 'Supabase', 'Netlify', 'Midjourney', 'Photoshop'],
-        "image": walletEval,
-        "link": 'https://nuxtwallet.netlify.app/'
     },
     {
         "name": 'Foundation Site',

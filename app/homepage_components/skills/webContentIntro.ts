@@ -55,11 +55,7 @@ export const webIntro = [
         {
             "name": "NodeJS",
             "image": nodeLogo
-        },
-        {
-            "name": "Python",
-            "image": pythonLogo
-        },
+        }
     ],
     [
         {
@@ -85,11 +81,7 @@ export const webIntro = [
         {
             "name": "WordPress",
             "image": wordpressLogo
-        },
-        {
-            "name": "Kivy",
-            "image": kivyLogo
-        },
+        }
     ],
     [
         {
@@ -119,7 +111,7 @@ export const webIntro = [
         {
             "name": "Midjourney",
             "image": midjourneyLogo
-        },
+        }
     ],
     [
         {
@@ -145,7 +137,7 @@ export const webIntro = [
         {
             "name": "OpenAI",
             "image": openaiLogo
-        },
+        }
     ],
     [
         {
@@ -167,7 +159,7 @@ export const webIntro = [
         {
             "name": "Auth",
             "image": authLogo
-        },
+        }
     ],
     [
         {
@@ -185,6 +177,6 @@ export const webIntro = [
         {
             "name": "CloudWatch",
             "image": cloudwatchLogo
-        },
+        }
     ],
 ]
