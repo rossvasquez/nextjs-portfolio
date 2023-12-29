@@ -77,10 +77,6 @@ export const webIntro = [
         {
             "name": "Nuxt3",
             "image": nuxtLogo
-        },
-        {
-            "name": "WordPress",
-            "image": wordpressLogo
         }
     ],
     [
@@ -107,10 +103,6 @@ export const webIntro = [
         {
             "name": "Photoshop",
             "image": photoshopLogo
-        },
-        {
-            "name": "Midjourney",
-            "image": midjourneyLogo
         }
     ],
     [
@@ -129,10 +121,6 @@ export const webIntro = [
         {
             "name": "Netlify",
             "image": netlifyLogo
-        },
-        {
-            "name": "Cloudflare",
-            "image": cloudflareLogo
         },
         {
             "name": "OpenAI",

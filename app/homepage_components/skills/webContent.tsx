@@ -29,9 +29,9 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2, refer}: {Ro
         } else if (WebSkillIndex === 2) {
             return 'Styling'
         } else if (WebSkillIndex === 3) {
-            return 'Backend Services'
+            return 'Services'
         } else if (WebSkillIndex === 4) {
-            return 'Database'
+            return 'Storage'
         } else if (WebSkillIndex === 5) {
             return 'DevOps'
         }
@@ -116,19 +116,19 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2, refer}: {Ro
     const Content = () =>
     <div className='w-full flex flex-col justify-center items-center bg-neutral-800 bg-opacity-30 overflow-hidden shadow-md max-w-7xl mx-auto h-auto p-2 pb-4 md:p-4 md:mt-4 md:rounded-[6px]'>
         <div className='shadow-inner px-2 mb-2 md:mb-4 bg-neutral-800 bg-opacity-[40%] w-full rounded-md'>
-            <p className={`${Bebas} text-5xl md:text-6xl text-white mt-8 w-full text-center`}>Full Stack Web App Development</p>
+            <p className={`${Bebas} text-5xl md:text-6xl text-white mt-8 w-full text-center`}>Full Stack Skills</p>
             <p className={`${Roboto1} text-white text-3xl md:text-4xl text-center mt-2 mb-8`}>{getSkill()}</p>
         </div>
         <div className='flex flex-col justify-center bg-neutral-800 rounded-[6px] bg-opacity-[40%] shadow-inner px-14 py-6 items-center w-full h-full'>
             {SkillDes.map((item, id) => 
             <div key={id} className={`w-full h-auto flex flex-wrap justify-center mb-6 gap-x-16 md:gap-x-14 transition-all ${WebSkillIndex === id ? 'opacity-100' : 'opacity-0 hidden'}`}>
                 {item.map((child) => 
-                    <div key={child.name} className={`mt-6 md:mt-0 flex flex-col justify-center items-center md:py-6 ${WebSkillIndex === 1 ? 'md:px-6' : 'md:px-16'} rounded-[4px]`}>
+                    <div key={child.name} className={`mt-6 md:mt-0 flex flex-col justify-center items-center md:py-6 md:px-16 rounded-[4px]`}>
                         <div className='h-24 md:h-32 w-full flex justify-center'>
                             <Image
                                 alt={`${child.name} Logo`}
                                 src={child.image}
-                                className={`${child.name == 'Google Fonts' ? 'scale-[75%]' : null} ${child.name == 'CI/CD' ? 'scale-[90%]' : null} ${child.name == 'WordPress' ? 'scale-[90%]' : null} ${child.name == 'CSS' ? 'scale-[75%]' : null} ${child.name == 'Netlify' ? 'scale-[90%]' : null} ${child.name == 'AWS' ? 'scale-[120%] mt-2' : null} h-full w-auto drop-shadow-lg`}
+                                className={`${child.name == 'Google Fonts' ? 'scale-[75%]' : null} ${child.name == 'CI/CD' ? 'scale-[90%]' : null} ${child.name == 'CSS' ? 'scale-[75%]' : null} ${child.name == 'Netlify' ? 'scale-[90%]' : null} ${child.name == 'AWS' ? 'scale-[120%] mt-2' : null} h-full w-auto drop-shadow-lg`}
                                 priority
                             />
                         </div>
@@ -158,7 +158,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2, refer}: {Ro
             </div>
         </div>
         <div className='flex justify-center items-center bg-neutral-800 p-6 bg-opacity-[40%] shadow-inner rounded-md mt-2 md:mt-4'>
-            <p className={`text-white text-2xl md:text-3xl ${Roboto1} leading-[3rem] md:leading-[4rem]`}>From creating basic Shopify websites in high school to developing my first simple application in Kivy (Python), I always knew I had an interest in software. However, I didn&#8217;t fully realize my passion for development until I completed my Salesforce Administrator Certification. Learning about JavaScript Development in Salesforce led me to inadvertently dive headfirst into the world of web development. My journey began with the creation of a VanillaJS Catering Order App for the local restaurant I helped manage. Since then, I have spent over a year learning what it means to create a modern full-stack application through hands-on experience. I have worked with various JavaScript frameworks and tools, as well as backend services beyond JavaScript. This experience has taught me how the world consumes, transfers, and reflects data. I am excited and optimistic about the future of development and greatly enjoy the ability to create bespoke solutions that others can interact with.</p>
+            <p className={`text-white text-2xl md:text-3xl ${Roboto1} leading-[3rem] md:leading-[4rem]`}>From creating basic Shopify websites in high school to developing my first simple application in Kivy (Python), I always knew I had an interest in software. However, I didn&#8217;t fully realize my passion for development until I completed my Salesforce Administrator Certification. Learning about JavaScript Development in Salesforce led me headfirst into the world of web development. My journey began with the creation of a VanillaJS Catering Order App for the local restaurant I helped manage. Since then, I have spent over a year learning what it means to create a modern full-stack application through hands-on experience. I have worked with various JavaScript frameworks and tools, as well as backend services beyond JavaScript. These experiences have taught me how the world consumes, transfers, and reflects data. I am excited and optimistic about the future of development and enjoy the ability to create bespoke solutions that others can interact with.</p>
         </div>
         {projects()}
     </div>
