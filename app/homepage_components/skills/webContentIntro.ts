@@ -9,7 +9,7 @@ import reactLogo from '../../../public/webIntro/frameworks/react.png'
 import vueLogo from '../../../public/webIntro/frameworks/vue.png'
 import viteLogo from '../../../public/webIntro/frameworks/vite.png'
 import nextLogo from '../../../public/webIntro/frameworks/next.png'
-import wordpressLogo from '../../../public/webIntro/frameworks/wordpress.png'
+import express from '../../../public/webIntro/frameworks/express.png'
 import kivyLogo from '../../../public/webIntro/frameworks/kivy.png'
 
 import cssLogo from '../../../public/webIntro/styling/css.png'
@@ -63,10 +63,6 @@ export const webIntro = [
             "image": reactLogo
         },
         {
-            "name": "Vite",
-            "image": viteLogo
-        },
-        {
             "name": "NextJS",
             "image": nextLogo
         },
@@ -77,6 +73,10 @@ export const webIntro = [
         {
             "name": "Nuxt3",
             "image": nuxtLogo
+        },
+        {
+            "name": "Express",
+            "image": express
         }
     ],
     [

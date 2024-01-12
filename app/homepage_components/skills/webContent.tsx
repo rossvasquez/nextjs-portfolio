@@ -128,7 +128,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2, refer}: {Ro
                             <Image
                                 alt={`${child.name} Logo`}
                                 src={child.image}
-                                className={`${child.name == 'Google Fonts' ? 'scale-[75%]' : null} ${child.name == 'CI/CD' ? 'scale-[90%]' : null} ${child.name == 'CSS' ? 'scale-[75%]' : null} ${child.name == 'Netlify' ? 'scale-[90%]' : null} ${child.name == 'AWS' ? 'scale-[120%] mt-2' : null} h-full w-auto drop-shadow-lg`}
+                                className={`${child.name == 'Google Fonts' ? 'scale-[75%]' : null} ${child.name == 'CI/CD' ? 'scale-[90%]' : null} ${child.name == 'Express' ? 'scale-[120%]' : null} ${child.name == 'CSS' ? 'scale-[75%]' : null} ${child.name == 'Netlify' ? 'scale-[90%]' : null} ${child.name == 'AWS' ? 'scale-[120%] mt-2' : null} h-full w-auto drop-shadow-lg`}
                                 priority
                             />
                         </div>

@@ -5,12 +5,22 @@ import walletEval from '../../../public/websites/walletEval.png'
 import zmariks from '../../../public/websites/zmariks.png'
 import cateringOrderSystem from '../../../public/websites/cateringOrderSystem.png'
 import psd from '../../../public/websites/psd.png'
-import reactpress from '../../../public/websites/reactpress.png'
+import findata from '../../../public/websites/findata.png'
 import portfolio_v1 from '../../../public/websites/portfolio_v1.png'
 import portfolio_v2 from '../../../public/websites/portfolio_v2.png'
 import reminder_app from '../../../public/websites/reminder_app.png'
 
 export const projectInfo = [
+    {
+        "name": 'FinData',
+        "tagline": "Full Stack Government API App",
+        "description1": "A Full Stack application built with a static React/React Router Frontend developed with Vite and Typescript. Backend is an Express/Node.js hosted on AWS Elastic Beanstalk that has cron jobs to push Financial Data from Government APIs into a PostgreSQL database hosted on AWS RDS. Features a Bank Search functionality that allows users to search for banks and get financials for each institution. Also features a Trend Tracker that displays current economic metrics.",
+        "description2": 'Visit the site and search for your bank!',
+        "description3": [],
+        "with": ['Typescript', 'JavaScript', 'React', 'TailwindCSS', 'Vite', 'Netlify', 'Node.js', 'Express', 'AWS Elastic Beanstalk', 'PostgreSQL', 'AWS RDS'],
+        "image": findata,
+        "link": 'https://findatav1.netlify.app'
+    },
     {
         "name": 'Tiden',
         "tagline": "Full Stack OpenAI App",
