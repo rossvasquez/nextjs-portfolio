@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Ross' Portfolio",
     description: "A collection of work.",
     siteName: "Ross' Portfolio",
-    images: [{url: "https://evoumvdxqcveaclexrxv.supabase.co/storage/v1/object/public/Images/this_site.png",}]
+    images: [{url: "https://rossvasquez.me/static/media/portfolio_v3.be0529e2.png",}]
   }
 }
 
