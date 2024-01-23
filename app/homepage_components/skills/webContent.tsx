@@ -70,13 +70,13 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2, refer}: {Ro
                                     <div className='relative group object-cover w-auto md:w-[30rem] h-auto md:h-[20rem] md:rounded-md overflow-hidden shadow-md bg-slate-300'>
                                         <Image
                                             src={item.image}
-                                            alt={`${item.name} Site Logo`}
-                                            className={`relative z-10 h-full object-cover`}
+                                            alt={`${item.name} Logo`}
+                                            className={`relative z-10 ${item.name == 'Image to CSV Parser' ? 'object-fit pb-10' : 'object-cover'} h-full`}
                                             priority
                                         />
                                         <div className='absolute z-20 top-0 flex justify-center items-center w-full h-full bg-zinc-800 bg-opacity-0 opacity-0 group-hover:bg-opacity-[60%] group-hover:opacity-100'>
                                             <a href={item.link} target='_blank' className={`py-6 px-12 flex justify-center bg-zinc-800 bg-opacity-80 hover:bg-opacity-100 hover:scale-[103%] hover:bg-gradient-to-tr hover:from-cyan-500 hover:to-blue-500 transition-all border-opacity-60 border-white shadow-inner hover:cursor-pointer hover:shadow-md rounded-full text-3xl text-white items-center active:bg-opacity-60 ${Roboto}`}>
-                                                Visit Site
+                                                {item.name == 'Image to CSV Parser' ? 'Visit Repo' : 'Visit Site'}
                                             </a>
                                         </div>
                                         <p className={`left-[50%] translate-x-[-50%] absolute group-hover:opacity-0 bottom-4 z-30 text-white px-4 rounded-full bg-zinc-800 bg-opacity-60 ${Roboto}`}>Hover</p>

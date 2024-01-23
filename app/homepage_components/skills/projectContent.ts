@@ -1,5 +1,5 @@
 import tiden from '../../../public/websites/tiden.png'
-import foundation from '../../../public/websites/foundation.png'
+import vision from '../../../public/websites/vision.svg'
 import mockUpIPHONE from '../../../public/websites/mockUpIPHONE.png'
 import walletEval from '../../../public/websites/walletEval.png'
 import zmariks from '../../../public/websites/zmariks.png'
@@ -20,6 +20,16 @@ export const projectInfo = [
         "with": ['Typescript', 'JavaScript', 'React', 'TailwindCSS', 'Vite', 'Netlify', 'Node.js', 'Express', 'AWS Elastic Beanstalk', 'PostgreSQL', 'AWS RDS'],
         "image": findata,
         "link": 'https://findatav1.netlify.app'
+    },
+    {
+        "name": 'Image to CSV Parser',
+        "tagline": "Node.js Script",
+        "description1": "Node.js script that utilizes Tessract OCR to parse ~10,000 images into a cleasned and digestable CSV File for a client on Replit Bounties.",
+        "description2": 'Check out the script on GitHub',
+        "description3": [],
+        "with": ['Tesseract OCR', 'Sharp', 'Export-to-CSV', 'Node.js'],
+        "image": vision,
+        "link": 'https://github.com/rossvasquez/ImageToContactsCSV'
     },
     {
         "name": 'Tiden',

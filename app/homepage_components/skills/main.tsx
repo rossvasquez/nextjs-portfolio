@@ -75,7 +75,7 @@ export const MainSkills: React.FC<MainSkillsProps> = ({ Bebas, SkillsIndex, setS
     const Menu = () =>
     <div className="relative w-full z-20 mx-auto group flex items-center justify-center ">
         <div className={`absolute z-10 flex h-auto w-[300vw] ${CurrentTrans} ${SkillsIndex === 0 ? 'menu0' : null} ${SkillsIndex === 1 ? 'menu1' : null} ${SkillsIndex === 2 ? 'menu2' : null}`}>
-            <div className={`text-zinc-800 pt-3 md:pt-20 lg:pt-5 px-6 md:px-20 text-left md:text-center w-[100vw] -mt-12 md:mt-0 leading-[5rem] text-[1.4rem] md:text-[3.99rem] md:leading-[5rem] flex h-auto drop-shadow-md justify-start md:justify-center items-start md:items-center ${pressstart.className}`}>Web Developer</div>
+            <div className={`text-zinc-800 pt-3 md:pt-20 lg:pt-5 px-6 md:px-20 text-left md:text-center w-[100vw] -mt-12 md:mt-0 leading-[5rem] text-[1.4rem] md:text-[3.99rem] md:leading-[5rem] flex h-auto drop-shadow-md justify-start md:justify-center items-start md:items-center ${pressstart.className}`}>Software Dev</div>
             <div className={`text-zinc-800 pt-3 md:pt-20 lg:pt-5 px-6 md:px-20 text-left md:text-center w-[100vw] -mt-12 md:mt-0 leading-[5rem] text-[2.6rem] md:text-[6rem] md:leading-[5rem] flex h-auto drop-shadow-md justify-start md:justify-center items-start md:items-center ${work.className}`}>CRM Specialist</div>
             <div className={`text-zinc-800 pt-3 md:pt-28 lg:pt-5 px-6 md:px-20 text-left md:text-center w-[100vw] -mt-12 md:mt-0 leading-[5rem] text-[3rem] md:text-[7rem] md:leading-[5.5rem] flex h-auto drop-shadow-md justify-start md:justify-center items-start md:items-center ${playball.className}`}>Digital Marketer</div>
         </div>
