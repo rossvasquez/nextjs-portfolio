@@ -11,7 +11,14 @@ export const metadata: Metadata = {
     description: "A collection of work.",
     siteName: "Ross' Portfolio",
     images: [{url: "https://rossvasquez.me/static/media/portfolio_v3.be0529e2.png",}]
-  }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Ross' Portfolio",
+    description: "A collection of work.",
+    creator: '@quezdevelops',
+    images: ['https://rossvasquez.me/static/media/portfolio_v3.be0529e2.png'],
+  },
 }
 
 export default function RootLayout({
