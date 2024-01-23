@@ -1,7 +1,7 @@
 import tiden from '../../../public/websites/tiden.png'
 import vision from '../../../public/websites/vision.svg'
 import mockUpIPHONE from '../../../public/websites/mockUpIPHONE.png'
-import walletEval from '../../../public/websites/walletEval.png'
+import portfolio_v3 from '../../../public/websites/portfolio_v3.png'
 import zmariks from '../../../public/websites/zmariks.png'
 import cateringOrderSystem from '../../../public/websites/cateringOrderSystem.png'
 import psd from '../../../public/websites/psd.png'
@@ -112,9 +112,19 @@ export const projectInfo = [
     //     "link": 'https://michaelhenterfoundation.org'
     // },
     {
+        "name": 'Current Portfolio',
+        "tagline": "Tailwind Next App",
+        "description1": "My current portfolio built with ReactTS/Next/TailwindCSS. Features a contact form that sends me emails via EmailJS. State management used to create interactivity i.e. menu bar.",
+        "description2": 'Welcome!',
+        "description3": [],
+        "with": ['TypeScript', 'React', 'NextJS', 'TailwindCSS', 'Netlify', 'EmailJS'],
+        "image": portfolio_v3,
+        "link": 'https://rossvasquez.me'
+    },
+    {
         "name": 'Previous Portfolio',
         "tagline": "Tailwind Parallax App",
-        "description1": "My previous portfolio that where I built components with Tailwind and utilized Parallax for a cool landing effect.",
+        "description1": "My previous portfolio built with ReactJS/TailwindCSS that utilizes Parallax for a cool landing effect.",
         "description2": 'Visit the site to check out my old vision.',
         "description3": [],
         "with": ['JavaScript', 'React', 'Vite', 'TailwindCSS', 'Netlify', 'Parallax'],
