@@ -9,6 +9,7 @@ import findata from '../../../public/websites/findata.png'
 import portfolio_v1 from '../../../public/websites/portfolio_v1.png'
 import portfolio_v2 from '../../../public/websites/portfolio_v2.png'
 import reminder_app from '../../../public/websites/reminder_app.png'
+import weather from '../../../public/websites/VueWeather.png'
 
 export const projectInfo = [
     {
@@ -30,6 +31,16 @@ export const projectInfo = [
         "with": ['Tesseract OCR', 'Sharp', 'Export-to-CSV', 'Node.js'],
         "image": vision,
         "link": 'https://github.com/rossvasquez/ImageToContactsCSV'
+    },
+    {
+        "name": 'Local Weather',
+        "tagline": "Vue3 Weather App",
+        "description1": "Having been leaning more towards React in recent projects I wanted to step back and refresh my knowledge of Vue. I used a free weather API to consume data related to site visitor's geolocation data (lon/lat). I created a widget based layout that is adaptive to both desktop and mobile environments.",
+        "description2": 'Visit the site to check your local weather!',
+        "description3": [],
+        "with": ['Typescript', 'Vue3', 'TailwindCSS', 'Netlify', 'weatherapi.com'],
+        "image": weather,
+        "link": 'https://vueyourweather.netlify.app'
     },
     {
         "name": 'Tiden',
