@@ -33,7 +33,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2, refer}: {Ro
         } else if (WebSkillIndex === 4) {
             return 'Storage'
         } else if (WebSkillIndex === 5) {
-            return 'DevOps'
+            return 'Application Management'
         }
 
     }
@@ -89,7 +89,7 @@ export default function WebContent({Roboto, Bebas, Roboto1, Roboto2, refer}: {Ro
                                 {item.name == 'Functioning Mockup' ? 
                                 <a href='/PSD-Mockup.jpg' target='_blank' className={`drop-shadow-md md:text-center w-full text-xl md:text-3xl leading-[2.7rem] md:leading-[3rem] text-[#ffffff] ${Roboto}`}>Click here to view the mockup, then check out the responsive site.</a>
                                 :
-                                <p className={`drop-shadow-md md:text-center w-full text-xl md:text-3xl leading-[2.7rem] md:leading-[3rem] text-[#ffffff] ${Roboto}`}>{item.description2}</p>
+                                <p className={`drop-shadow-md text-center w-full text-xl md:text-3xl leading-[2.7rem] md:leading-[3rem] text-[#ffffff] ${Roboto}`}>{item.description2}</p>
                                 }
                                 {item.description3.length === 0 ? null :
                                     <div className='w-full flex flex-wrap md:justify-center -ml-4 md:-ml-0 mt-4 mb-2'>

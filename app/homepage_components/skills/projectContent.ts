@@ -10,8 +10,19 @@ import portfolio_v1 from '../../../public/websites/portfolio_v1.png'
 import portfolio_v2 from '../../../public/websites/portfolio_v2.png'
 import reminder_app from '../../../public/websites/reminder_app.png'
 import weather from '../../../public/websites/VueWeather.png'
+import vewery from '../../../public/websites/vewery.png'
 
 export const projectInfo = [
+    {
+        "name": 'Vewery',
+        "tagline": "Like and Review Breweries",
+        "description1": "A Full Stack application built with Vue3 Composition API in Typescript. Utilizes Serverless NodeJS for backend. MongoDB stores Likes and Reviews. Open Brewery DB was used as a source for brewery information. Allows users to search for breweries by location or name. You can also select I'm Feeling Lucky to see a random brewery. Users can Like or Review Breweries and state regarding whether they have or haven't interacted as such is stored in LocalStorage.",
+        "description2": 'Search for your favorite brewery and leave a review!',
+        "description3": [],
+        "with": ['Typescript', 'JavaScript', 'Vue3', 'TailwindCSS', 'Vite', 'Netlify', 'Node.js', 'NSQL', 'MongoDB', 'LocalStorage', 'Figma'],
+        "image": vewery,
+        "link": 'https://vewery.netlify.app'
+    },
     {
         "name": 'FinData',
         "tagline": "Full Stack Government API App",
@@ -21,26 +32,6 @@ export const projectInfo = [
         "with": ['Typescript', 'JavaScript', 'React', 'TailwindCSS', 'Vite', 'Netlify', 'Node.js', 'Express', 'AWS Elastic Beanstalk', 'PostgreSQL', 'AWS RDS'],
         "image": findata,
         "link": 'https://findatav1.netlify.app'
-    },
-    {
-        "name": 'Image to CSV Parser',
-        "tagline": "Node.js Script",
-        "description1": "Node.js script that utilizes Tessract OCR to parse ~10,000 images into a cleasned and digestable CSV File for a client on Replit Bounties.",
-        "description2": 'Check out the script on GitHub',
-        "description3": [],
-        "with": ['Tesseract OCR', 'Sharp', 'Export-to-CSV', 'Node.js'],
-        "image": vision,
-        "link": 'https://github.com/rossvasquez/ImageToContactsCSV'
-    },
-    {
-        "name": 'Local Weather',
-        "tagline": "Vue3 Weather App",
-        "description1": "Having been leaning more towards React in recent projects I wanted to step back and refresh my knowledge of Vue. I used a free weather API to consume data related to site visitor's geolocation data (lon/lat). I created a widget based layout that is adaptive to both desktop and mobile environments.",
-        "description2": 'Visit the site to check your local weather!',
-        "description3": [],
-        "with": ['Typescript', 'Vue3', 'TailwindCSS', 'Netlify', 'weatherapi.com'],
-        "image": weather,
-        "link": 'https://vueyourweather.netlify.app'
     },
     {
         "name": 'Tiden',
@@ -53,6 +44,16 @@ export const projectInfo = [
         "link": 'https://tiden-ai.netlify.app'
     },
     {
+        "name": 'Image to CSV Parser',
+        "tagline": "Node.js Script",
+        "description1": "Node.js script that utilizes Tessract OCR to parse ~10,000 images into a cleasned and digestable CSV File for a client on Replit Bounties.",
+        "description2": 'Check out the script on GitHub',
+        "description3": [],
+        "with": ['Tesseract OCR', 'Sharp', 'Export-to-CSV', 'Node.js'],
+        "image": vision,
+        "link": 'https://github.com/rossvasquez/ImageToContactsCSV'
+    },
+    {
         "name": 'State Fairdle',
         "tagline": "Full Stack Hackathon Entry",
         "description1": "My family has a daily addiction, Wordle. We also have an annual addiction, The Iowa State Fair. So naturally when a Supabase hackathon roles around, you build your own bespoke version of Wordle with Iowa State Fair words. React App built with Vite. Netlify function (Lambda) checks validity of guesses via Dictionary API, Postgre DB hosted on Supabase contains daily word and analytics.",
@@ -61,6 +62,16 @@ export const projectInfo = [
         "with": ['JavaScript', 'React', 'Vite', 'TailwindCSS', 'Supabase', 'Netlify', 'Serverless Functions', 'Dictionary API', 'Midjourney', 'Photoshop'],
         "image": mockUpIPHONE,
         "link": 'https://statefairdle.com',
+    },
+    {
+        "name": 'Local Weather',
+        "tagline": "Vue3 Weather App",
+        "description1": "Having been leaning more towards React in recent projects I wanted to step back and refresh my knowledge of Vue. I used a free weather API to consume data related to site visitor's geolocation data (lon/lat). I created a widget based layout that is adaptive to both desktop and mobile environments.",
+        "description2": 'Visit the site to check your local weather!',
+        "description3": [],
+        "with": ['Typescript', 'Vue3', 'TailwindCSS', 'Netlify', 'weatherapi.com'],
+        "image": weather,
+        "link": 'https://vueyourweather.netlify.app'
     },
     {
         "name": 'Reminder App',

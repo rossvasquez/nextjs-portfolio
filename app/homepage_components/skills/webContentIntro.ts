@@ -18,12 +18,14 @@ import muiLogo from '../../../public/webIntro/styling/mui.png'
 import tailwindLogo from '../../../public/webIntro/styling/tailwind.png'
 import gfontsLogo from '../../../public/webIntro/styling/gfonts.png'
 import photoshopLogo from '../../../public/webIntro/styling/photoshop.png'
+import figmaLogo from '../../../public/webIntro/styling/figma.png'
 
 import firebaseLogo from '../../../public/webIntro/services/firebase.png'
 import supabaseLogo from '../../../public/webIntro/services/supabase.png'
 import netlifyLogo from '../../../public/webIntro/services/netlify.png'
 import awsLogo from '../../../public/webIntro/services/aws.png'
 import cloudflareLogo from '../../../public/webIntro/services/cloudflare.png'
+import mongoLogo from '../../../public/webIntro/services/mongo.svg'
 import openaiLogo from '../../../public/webIntro/services/openai.png'
 import midjourneyLogo from '../../../public/webIntro/services/midjourney.png'
 
@@ -93,12 +95,8 @@ export const webIntro = [
             "image": muiLogo
         },
         {
-            "name": "FontAwesome",
-            "image": fontawesomeLogo
-        },
-        {
-            "name": "Google Fonts",
-            "image": gfontsLogo
+            "name": "Figma",
+            "image": figmaLogo
         },
         {
             "name": "Photoshop",
@@ -107,20 +105,24 @@ export const webIntro = [
     ],
     [
         {
-            "name": "Supabase",
-            "image": supabaseLogo
-        },
-        {
             "name": "AWS",
             "image": awsLogo
         },
         {
-            "name": "Firebase",
-            "image": firebaseLogo
-        },
-        {
             "name": "Netlify",
             "image": netlifyLogo
+        },
+        {
+            "name": "Supabase",
+            "image": supabaseLogo
+        },
+        {
+            "name": "MongoDB",
+            "image": mongoLogo
+        },
+        {
+            "name": "Firebase",
+            "image": firebaseLogo
         },
         {
             "name": "OpenAI",
